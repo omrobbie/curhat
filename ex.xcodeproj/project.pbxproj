@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		FC40924E211D4A97009E8D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40924D211D4A97009E8D5E /* AppDelegate.swift */; };
-		FC409250211D4A97009E8D5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40924F211D4A97009E8D5E /* ViewController.swift */; };
+		FC409250211D4A97009E8D5E /* ReboundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40924F211D4A97009E8D5E /* ReboundController.swift */; };
 		FC409253211D4A97009E8D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409251211D4A97009E8D5E /* Main.storyboard */; };
 		FC409255211D4A9A009E8D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC409254211D4A9A009E8D5E /* Assets.xcassets */; };
 		FC409258211D4A9A009E8D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409256211D4A9A009E8D5E /* LaunchScreen.storyboard */; };
+		FC409267211D7C7A009E8D5E /* TradeInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC409266211D7C7A009E8D5E /* TradeInController.swift */; };
+		FC409269211D7C96009E8D5E /* CurhatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC409268211D7C96009E8D5E /* CurhatController.swift */; };
+		FC40927B211D9847009E8D5E /* TradeIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409275211D9846009E8D5E /* TradeIn.storyboard */; };
+		FC40927C211D9847009E8D5E /* Rebound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409277211D9846009E8D5E /* Rebound.storyboard */; };
+		FC40927D211D9847009E8D5E /* Curhat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409279211D9847009E8D5E /* Curhat.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC40924A211D4A97009E8D5E /* ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40924D211D4A97009E8D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC40924F211D4A97009E8D5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC40924F211D4A97009E8D5E /* ReboundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReboundController.swift; sourceTree = "<group>"; };
 		FC409252211D4A97009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC409254211D4A9A009E8D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC409257211D4A9A009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC409259211D4A9A009E8D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC409266211D7C7A009E8D5E /* TradeInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeInController.swift; sourceTree = "<group>"; };
+		FC409268211D7C96009E8D5E /* CurhatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatController.swift; sourceTree = "<group>"; };
+		FC409276211D9846009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TradeIn.storyboard; sourceTree = "<group>"; };
+		FC409278211D9846009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Rebound.storyboard; sourceTree = "<group>"; };
+		FC40927A211D9847009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Curhat.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,26 @@
 			isa = PBXGroup;
 			children = (
 				FC40924D211D4A97009E8D5E /* AppDelegate.swift */,
-				FC40924F211D4A97009E8D5E /* ViewController.swift */,
-				FC409251211D4A97009E8D5E /* Main.storyboard */,
+				FC40924F211D4A97009E8D5E /* ReboundController.swift */,
+				FC409266211D7C7A009E8D5E /* TradeInController.swift */,
+				FC409268211D7C96009E8D5E /* CurhatController.swift */,
+				FC40925F211D4AC6009E8D5E /* Storyboards */,
 				FC409254211D4A9A009E8D5E /* Assets.xcassets */,
-				FC409256211D4A9A009E8D5E /* LaunchScreen.storyboard */,
 				FC409259211D4A9A009E8D5E /* Info.plist */,
 			);
 			path = ex;
+			sourceTree = "<group>";
+		};
+		FC40925F211D4AC6009E8D5E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FC409256211D4A9A009E8D5E /* LaunchScreen.storyboard */,
+				FC409251211D4A97009E8D5E /* Main.storyboard */,
+				FC409277211D9846009E8D5E /* Rebound.storyboard */,
+				FC409275211D9846009E8D5E /* TradeIn.storyboard */,
+				FC409279211D9847009E8D5E /* Curhat.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +145,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC40927B211D9847009E8D5E /* TradeIn.storyboard in Resources */,
+				FC40927C211D9847009E8D5E /* Rebound.storyboard in Resources */,
 				FC409258211D4A9A009E8D5E /* LaunchScreen.storyboard in Resources */,
+				FC40927D211D9847009E8D5E /* Curhat.storyboard in Resources */,
 				FC409255211D4A9A009E8D5E /* Assets.xcassets in Resources */,
 				FC409253211D4A97009E8D5E /* Main.storyboard in Resources */,
 			);
@@ -135,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC409250211D4A97009E8D5E /* ViewController.swift in Sources */,
+				FC409269211D7C96009E8D5E /* CurhatController.swift in Sources */,
+				FC409267211D7C7A009E8D5E /* TradeInController.swift in Sources */,
+				FC409250211D4A97009E8D5E /* ReboundController.swift in Sources */,
 				FC40924E211D4A97009E8D5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +185,30 @@
 				FC409257211D4A9A009E8D5E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FC409275211D9846009E8D5E /* TradeIn.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC409276211D9846009E8D5E /* Base */,
+			);
+			name = TradeIn.storyboard;
+			sourceTree = "<group>";
+		};
+		FC409277211D9846009E8D5E /* Rebound.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC409278211D9846009E8D5E /* Base */,
+			);
+			name = Rebound.storyboard;
+			sourceTree = "<group>";
+		};
+		FC409279211D9847009E8D5E /* Curhat.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC40927A211D9847009E8D5E /* Base */,
+			);
+			name = Curhat.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

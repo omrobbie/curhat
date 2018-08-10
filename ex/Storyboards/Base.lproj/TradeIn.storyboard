@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nZs-Fl-mSC">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trade In-->
+        <scene sceneID="DxZ-Yw-J9T">
+            <objects>
+                <viewController id="BwB-8A-pmO" customClass="TradeInController" customModule="ex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lNL-Er-nfy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="44o-H3-T8g"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trade In" id="p5f-dB-RQd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0G4-KJ-OUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893.5999999999999" y="776.60098522167493"/>
+        </scene>
+        <!--Trade In-->
+        <scene sceneID="QZw-j7-g3t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nZs-Fl-mSC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trade In" id="bEx-Xf-afO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oiP-45-2y5">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BwB-8A-pmO" kind="relationship" relationship="rootViewController" id="aXQ-v1-kwD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wh2-Ig-Ja8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="776.60098522167493"/>
+        </scene>
+    </scenes>
+</document>

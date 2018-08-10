@@ -1,0 +1,17 @@
+//
+//  CurhatController.swift
+//  ex
+//
+//  Created by omrobbie on 10/08/18.
+//  Copyright © 2018 omrobbie. All rights reserved.
+//
+
+import UIKit
+
+class CurhatController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+}
