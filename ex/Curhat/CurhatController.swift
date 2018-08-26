@@ -13,14 +13,12 @@ class CurhatController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableViewCurhat: UITableView!
     
-    let db = Firestore.firestore()
-    
     var curhats = [Curhat]()
     
+    var db: Firestore?
+    
+    var curhatReference: CollectionReference?
     var curhatListerner: ListenerRegistration?
-    var curhatReference: CollectionReference {
-        return db.collection("curhat")
-    }
     
     deinit {
         curhatListerner?.remove()
@@ -32,7 +30,10 @@ class CurhatController: UIViewController, UITableViewDelegate {
         self.tableViewCurhat.delegate = self
         self.tableViewCurhat.dataSource = self
         
-        curhatListerner = curhatReference.addSnapshotListener({ (querySnapshot, error) in
+        db = Firestore.firestore()
+        
+        curhatReference = db?.collection("curhat")
+        curhatListerner = curhatReference?.addSnapshotListener({ (querySnapshot, error) in
             guard let snapshot = querySnapshot else {return}
             
             snapshot.documentChanges.forEach({ (documentChange) in
@@ -53,32 +54,44 @@ class CurhatController: UIViewController, UITableViewDelegate {
     }
     
     func addList(_ curhat: Curhat) {
-//        guard !self.curhats.contains(curhat) else {return}
-//
-//        self.curhats.append(curhat)
-//        self.curhats.sort()
+        guard !self.curhats.contains(curhat) else {return}
+
+        self.curhats.append(curhat)
+        self.curhats.sort()
+        
+        guard let index = curhats.index(of: curhat) else {return}
+        
+        tableViewCurhat.insertRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
     
     func updateList(_ curhat: Curhat) {
-//        guard let index = curhats.index(of: curhat) else {return}
-//
-//        curhats[index] = curhat
-//        tableViewCurhat.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+        guard let index = curhats.index(of: curhat) else {return}
+
+        curhats[index] = curhat
+        tableViewCurhat.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
     
     func removeList(_ curhat: Curhat) {
+        guard let index = curhats.index(of: curhat) else {return}
         
+        curhats.remove(at: index)
+        tableViewCurhat.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
 }
 
 extension CurhatController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return curhats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewCurhat.dequeueReusableCell(withIdentifier: "cellCurhat", for: indexPath) as! CurhatTableViewCell
+        let qty = curhats[indexPath.row].comments
+        let comment = "\(qty!) comment"
+
+        cell.txtFeeling.text = curhats[indexPath.row].feeling
+        cell.txtNickname.text = curhats[indexPath.row].nickname
+        cell.txtComments.text = qty! > 0 ? comment + "s" : comment
         
         return cell
     }

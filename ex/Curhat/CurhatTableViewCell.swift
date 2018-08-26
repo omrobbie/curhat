@@ -10,4 +10,8 @@ import UIKit
 
 class CurhatTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var txtFeeling: UILabel!
+    @IBOutlet weak var txtNickname: UILabel!
+    @IBOutlet weak var txtComments: UILabel!
+    
 }

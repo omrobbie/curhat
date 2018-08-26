@@ -82,6 +82,11 @@
                                                 <constraint firstItem="0QT-2C-I6R" firstAttribute="top" secondItem="wuV-d2-YQ6" secondAttribute="bottom" constant="7.6666666666666714" id="r3B-4B-ZTj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="txtComments" destination="QeY-Bl-W4L" id="zuh-zd-JZJ"/>
+                                            <outlet property="txtFeeling" destination="wuV-d2-YQ6" id="tR2-oh-f5W"/>
+                                            <outlet property="txtNickname" destination="3rG-9b-Lhc" id="it3-1J-HuS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
