@@ -105,9 +105,6 @@ extension CurhatController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let curhat = curhats[indexPath.row]
-//        let viewController = CurhatCommentsViewController(curhat)
-//        self.navigationController?.pushViewController(viewController, animated: true)
         performSegue(withIdentifier: "CurhatComments", sender: indexPath)
     }
 }

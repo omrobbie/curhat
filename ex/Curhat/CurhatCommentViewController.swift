@@ -70,6 +70,14 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func btnSendClicked(_ sender: Any) {
+        guard let comment = txtComment.text, txtComment.text != "" else {return}
+        
+        let docData: [String : Any] = [
+            "nickname" : "omrobbie",
+            "comment" : comment
+        ]
+        
+        self.curhatReference?.document(self.curhat.id!).collection("comments").addDocument(data: docData)
     }
     
     func addList(_ curhatComment: CurhatComment) {
