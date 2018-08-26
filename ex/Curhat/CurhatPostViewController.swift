@@ -16,13 +16,18 @@ class CurhatPostViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarController?.tabBar.isHidden = true
+
         self.txtCurhat.delegate = self
         self.txtCurhat.text = placeholderText
         self.txtCurhat.textColor = UIColor.lightGray
         
         let rightBarButton = UIBarButtonItem(title: "Post", style: UIBarButtonItemStyle.plain, target: self, action: #selector(postCurhat(_:)))
         self.navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

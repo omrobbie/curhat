@@ -15,9 +15,14 @@ class CurhatCommentsViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarController?.tabBar.isHidden = true
+
         self.tableViewCurhatComments.delegate = self
         self.tableViewCurhatComments.dataSource = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     @IBAction func btnSendClicked(_ sender: Any) {
