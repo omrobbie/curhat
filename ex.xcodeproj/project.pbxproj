@@ -96,13 +96,11 @@
 		FC40924C211D4A97009E8D5E /* ex */ = {
 			isa = PBXGroup;
 			children = (
-				FC40924D211D4A97009E8D5E /* AppDelegate.swift */,
-				FC409266211D7C7A009E8D5E /* TradeInController.swift */,
-				FC40924F211D4A97009E8D5E /* ReboundController.swift */,
+				FC6E24482132861B00F180F8 /* Supporting Files */,
 				FC40925F211D4AC6009E8D5E /* Main */,
+				FC6E2449213286A900F180F8 /* Rebound */,
+				FC6E244A213286B300F180F8 /* TradeIn */,
 				FC6E2446213252A200F180F8 /* Curhat */,
-				FC409254211D4A9A009E8D5E /* Assets.xcassets */,
-				FC409259211D4A9A009E8D5E /* Info.plist */,
 			);
 			path = ex;
 			sourceTree = "<group>";
@@ -110,10 +108,7 @@
 		FC40925F211D4AC6009E8D5E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FC409256211D4A9A009E8D5E /* LaunchScreen.storyboard */,
 				FC409251211D4A97009E8D5E /* Main.storyboard */,
-				FC409277211D9846009E8D5E /* Rebound.storyboard */,
-				FC409275211D9846009E8D5E /* TradeIn.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -129,6 +124,35 @@
 				FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */,
 			);
 			path = Curhat;
+			sourceTree = "<group>";
+		};
+		FC6E24482132861B00F180F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC409254211D4A9A009E8D5E /* Assets.xcassets */,
+				FC40924D211D4A97009E8D5E /* AppDelegate.swift */,
+				FC409256211D4A9A009E8D5E /* LaunchScreen.storyboard */,
+				FC409259211D4A9A009E8D5E /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC6E2449213286A900F180F8 /* Rebound */ = {
+			isa = PBXGroup;
+			children = (
+				FC409277211D9846009E8D5E /* Rebound.storyboard */,
+				FC40924F211D4A97009E8D5E /* ReboundController.swift */,
+			);
+			path = Rebound;
+			sourceTree = "<group>";
+		};
+		FC6E244A213286B300F180F8 /* TradeIn */ = {
+			isa = PBXGroup;
+			children = (
+				FC409275211D9846009E8D5E /* TradeIn.storyboard */,
+				FC409266211D7C7A009E8D5E /* TradeInController.swift */,
+			);
+			path = TradeIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +232,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ex/Pods-ex-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
@@ -225,8 +247,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -250,15 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ex-checkManifestLockResult.txt",
 			);
