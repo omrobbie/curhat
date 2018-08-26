@@ -23,6 +23,8 @@
 		FC6E244321323C0B00F180F8 /* CurhatCommetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244221323C0B00F180F8 /* CurhatCommetsTableViewCell.swift */; };
 		FC6E244521324A3200F180F8 /* CurhatPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */; };
 		FC6E244C213287EB00F180F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC6E244B213287EB00F180F8 /* GoogleService-Info.plist */; };
+		FC6E244F21328BB800F180F8 /* Curhat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244E21328BB800F180F8 /* Curhat.swift */; };
+		FC6E245121328F0700F180F8 /* DatabaseReperesentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		FC6E244221323C0B00F180F8 /* CurhatCommetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatCommetsTableViewCell.swift; sourceTree = "<group>"; };
 		FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatPostViewController.swift; sourceTree = "<group>"; };
 		FC6E244B213287EB00F180F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC6E244E21328BB800F180F8 /* Curhat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curhat.swift; sourceTree = "<group>"; };
+		FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseReperesentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				FC6E24482132861B00F180F8 /* Supporting Files */,
+				FC6E244D21328B6800F180F8 /* Model */,
 				FC40925F211D4AC6009E8D5E /* Main */,
 				FC6E2449213286A900F180F8 /* Rebound */,
 				FC6E244A213286B300F180F8 /* TradeIn */,
@@ -156,6 +161,15 @@
 				FC409266211D7C7A009E8D5E /* TradeInController.swift */,
 			);
 			path = TradeIn;
+			sourceTree = "<group>";
+		};
+		FC6E244D21328B6800F180F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC6E244E21328BB800F180F8 /* Curhat.swift */,
+				FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +254,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ex/Pods-ex-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -254,7 +268,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -295,7 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6E244321323C0B00F180F8 /* CurhatCommetsTableViewCell.swift in Sources */,
+				FC6E245121328F0700F180F8 /* DatabaseReperesentation.swift in Sources */,
 				FC6E244121323BCA00F180F8 /* CurhatTableViewCell.swift in Sources */,
+				FC6E244F21328BB800F180F8 /* Curhat.swift in Sources */,
 				FC409269211D7C96009E8D5E /* CurhatController.swift in Sources */,
 				FC409267211D7C7A009E8D5E /* TradeInController.swift in Sources */,
 				FC6E243F21323AB000F180F8 /* CurhatCommentsViewController.swift in Sources */,
