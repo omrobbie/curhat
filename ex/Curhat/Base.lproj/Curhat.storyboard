@@ -165,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="2676" y="1193.3497536945813"/>
         </scene>
-        <!--Curhat Comments View Controller-->
+        <!--Curhat Comment View Controller-->
         <scene sceneID="Plo-SC-DiV">
             <objects>
-                <viewController id="U7Y-Pc-HWL" customClass="CurhatCommentsViewController" customModule="ex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U7Y-Pc-HWL" customClass="CurhatCommentViewController" customModule="ex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="frV-dr-Ga1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,7 @@
                                 <rect key="frame" x="0.0" y="193" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCurhatComments" rowHeight="69" id="7yb-jz-ikH" customClass="CurhatCommetsTableViewCell" customModule="ex" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCurhatComment" rowHeight="69" id="7yb-jz-ikH" customClass="CurhatCommentTableViewCell" customModule="ex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7yb-jz-ikH" id="jXc-3L-KmH">
@@ -234,6 +234,10 @@
                                                 <constraint firstItem="LkI-aa-Urv" firstAttribute="top" secondItem="jXc-3L-KmH" secondAttribute="topMargin" id="sr0-i2-DqD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="txtComment" destination="OA5-47-PLz" id="Qoe-2g-F2S"/>
+                                            <outlet property="txtNickname" destination="LkI-aa-Urv" id="Lk4-KS-cbL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -293,6 +297,8 @@
                     <connections>
                         <outlet property="tableViewCurhatComments" destination="kwz-8w-eCs" id="WUQ-yq-4L1"/>
                         <outlet property="txtComment" destination="4eP-G4-EaP" id="iS5-dg-wAN"/>
+                        <outlet property="txtFeeling" destination="5PE-Qq-cWh" id="8mU-bK-S9k"/>
+                        <outlet property="txtNickname" destination="yz2-Gu-ps6" id="Odi-9l-NDD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVa-qR-E00" userLabel="First Responder" sceneMemberID="firstResponder"/>

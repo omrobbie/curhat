@@ -18,13 +18,14 @@
 		FC40927B211D9847009E8D5E /* TradeIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409275211D9846009E8D5E /* TradeIn.storyboard */; };
 		FC40927C211D9847009E8D5E /* Rebound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409277211D9846009E8D5E /* Rebound.storyboard */; };
 		FC40927D211D9847009E8D5E /* Curhat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409279211D9847009E8D5E /* Curhat.storyboard */; };
-		FC6E243F21323AB000F180F8 /* CurhatCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E243E21323AB000F180F8 /* CurhatCommentsViewController.swift */; };
+		FC6E243F21323AB000F180F8 /* CurhatCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E243E21323AB000F180F8 /* CurhatCommentViewController.swift */; };
 		FC6E244121323BCA00F180F8 /* CurhatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244021323BCA00F180F8 /* CurhatTableViewCell.swift */; };
-		FC6E244321323C0B00F180F8 /* CurhatCommetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244221323C0B00F180F8 /* CurhatCommetsTableViewCell.swift */; };
+		FC6E244321323C0B00F180F8 /* CurhatCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244221323C0B00F180F8 /* CurhatCommentTableViewCell.swift */; };
 		FC6E244521324A3200F180F8 /* CurhatPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */; };
 		FC6E244C213287EB00F180F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC6E244B213287EB00F180F8 /* GoogleService-Info.plist */; };
 		FC6E244F21328BB800F180F8 /* Curhat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244E21328BB800F180F8 /* Curhat.swift */; };
 		FC6E245121328F0700F180F8 /* DatabaseReperesentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */; };
+		FCA6EAA02133163000CCA6B7 /* CurhatComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6EA9F2133163000CCA6B7 /* CurhatComment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,13 +44,14 @@
 		FC409276211D9846009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TradeIn.storyboard; sourceTree = "<group>"; };
 		FC409278211D9846009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Rebound.storyboard; sourceTree = "<group>"; };
 		FC40927A211D9847009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Curhat.storyboard; sourceTree = "<group>"; };
-		FC6E243E21323AB000F180F8 /* CurhatCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurhatCommentsViewController.swift; path = ex/Curhat/CurhatCommentsViewController.swift; sourceTree = SOURCE_ROOT; };
+		FC6E243E21323AB000F180F8 /* CurhatCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurhatCommentViewController.swift; path = ex/Curhat/CurhatCommentViewController.swift; sourceTree = SOURCE_ROOT; };
 		FC6E244021323BCA00F180F8 /* CurhatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurhatTableViewCell.swift; path = ex/Curhat/CurhatTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		FC6E244221323C0B00F180F8 /* CurhatCommetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatCommetsTableViewCell.swift; sourceTree = "<group>"; };
+		FC6E244221323C0B00F180F8 /* CurhatCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatCommentTableViewCell.swift; sourceTree = "<group>"; };
 		FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatPostViewController.swift; sourceTree = "<group>"; };
 		FC6E244B213287EB00F180F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC6E244E21328BB800F180F8 /* Curhat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curhat.swift; sourceTree = "<group>"; };
 		FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseReperesentation.swift; sourceTree = "<group>"; };
+		FCA6EA9F2133163000CCA6B7 /* CurhatComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatComment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +128,8 @@
 				FC409279211D9847009E8D5E /* Curhat.storyboard */,
 				FC409268211D7C96009E8D5E /* CurhatController.swift */,
 				FC6E244021323BCA00F180F8 /* CurhatTableViewCell.swift */,
-				FC6E243E21323AB000F180F8 /* CurhatCommentsViewController.swift */,
-				FC6E244221323C0B00F180F8 /* CurhatCommetsTableViewCell.swift */,
+				FC6E243E21323AB000F180F8 /* CurhatCommentViewController.swift */,
+				FC6E244221323C0B00F180F8 /* CurhatCommentTableViewCell.swift */,
 				FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */,
 			);
 			path = Curhat;
@@ -166,8 +168,9 @@
 		FC6E244D21328B6800F180F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FC6E244E21328BB800F180F8 /* Curhat.swift */,
 				FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */,
+				FC6E244E21328BB800F180F8 /* Curhat.swift */,
+				FCA6EA9F2133163000CCA6B7 /* CurhatComment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,15 +311,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6E244321323C0B00F180F8 /* CurhatCommetsTableViewCell.swift in Sources */,
+				FC6E244321323C0B00F180F8 /* CurhatCommentTableViewCell.swift in Sources */,
 				FC6E245121328F0700F180F8 /* DatabaseReperesentation.swift in Sources */,
 				FC6E244121323BCA00F180F8 /* CurhatTableViewCell.swift in Sources */,
 				FC6E244F21328BB800F180F8 /* Curhat.swift in Sources */,
 				FC409269211D7C96009E8D5E /* CurhatController.swift in Sources */,
 				FC409267211D7C7A009E8D5E /* TradeInController.swift in Sources */,
-				FC6E243F21323AB000F180F8 /* CurhatCommentsViewController.swift in Sources */,
+				FC6E243F21323AB000F180F8 /* CurhatCommentViewController.swift in Sources */,
 				FC6E244521324A3200F180F8 /* CurhatPostViewController.swift in Sources */,
 				FC409250211D4A97009E8D5E /* ReboundController.swift in Sources */,
+				FCA6EAA02133163000CCA6B7 /* CurhatComment.swift in Sources */,
 				FC40924E211D4A97009E8D5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

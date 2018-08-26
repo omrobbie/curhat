@@ -1,41 +1,37 @@
 //
-//  Curhat.swift
+//  Comment.swift
 //  ex
 //
-//  Created by omrobbie on 26/08/18.
+//  Created by omrobbie on 27/08/18.
 //  Copyright © 2018 omrobbie. All rights reserved.
 //
 
 import FirebaseFirestore
 
-struct Curhat {
+struct CurhatComment {
     let id: String?
     let nickname: String?
-    let feeling: String?
-    let comments: Int?
+    let comment: String?
     
     init() {
         self.id = nil
         self.nickname = nil
-        self.feeling = nil
-        self.comments = 0
+        self.comment = nil
     }
     
     init?(document: QueryDocumentSnapshot) {
         let data = document.data()
         
         guard let nickname = data["nickname"] as? String else {return nil}
-        guard let feeling = data["feeling"] as? String else {return nil}
-        guard let comments = data["comments"] as? Int else {return nil}
-
+        guard let comment = data["comment"] as? String else {return nil}
+        
         self.id = document.documentID
         self.nickname = nickname
-        self.feeling = feeling
-        self.comments = comments
+        self.comment = comment
     }
 }
 
-extension Curhat: DatabaseRepresentation {
+extension CurhatComment: DatabaseRepresentation {
     var representation: [String : Any] {
         var rep = ["nickname" : nickname!]
         
@@ -47,12 +43,12 @@ extension Curhat: DatabaseRepresentation {
     }
 }
 
-extension Curhat: Comparable {
-    static func == (lhs: Curhat, rhs: Curhat) -> Bool {
+extension CurhatComment: Comparable {
+    static func == (lhs: CurhatComment, rhs: CurhatComment) -> Bool {
         return lhs.id == rhs.id
     }
     
-    static func < (lhs: Curhat, rhs: Curhat) -> Bool {
+    static func < (lhs: CurhatComment, rhs: CurhatComment) -> Bool {
         return lhs.nickname! < rhs.nickname!
     }
 }

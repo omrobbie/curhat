@@ -30,10 +30,10 @@ class CurhatController: UIViewController, UITableViewDelegate {
         self.tableViewCurhat.delegate = self
         self.tableViewCurhat.dataSource = self
         
-        db = Firestore.firestore()
+        self.db = Firestore.firestore()
         
-        curhatReference = db?.collection("curhat")
-        curhatListerner = curhatReference?.addSnapshotListener({ (querySnapshot, error) in
+        self.curhatReference = db?.collection("curhat")
+        self.curhatListerner = curhatReference?.addSnapshotListener({ (querySnapshot, error) in
             guard let snapshot = querySnapshot else {return}
             
             snapshot.documentChanges.forEach({ (documentChange) in
@@ -51,6 +51,14 @@ class CurhatController: UIViewController, UITableViewDelegate {
                 }
             })
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CurhatComments",
+            let destination = segue.destination as? CurhatCommentViewController,
+            let index = tableViewCurhat.indexPathForSelectedRow?.row {
+                destination.curhat = curhats[index]
+        }
     }
     
     func addList(_ curhat: Curhat) {
@@ -97,6 +105,9 @@ extension CurhatController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let curhat = curhats[indexPath.row]
+//        let viewController = CurhatCommentsViewController(curhat)
+//        self.navigationController?.pushViewController(viewController, animated: true)
         performSegue(withIdentifier: "CurhatComments", sender: indexPath)
     }
 }
