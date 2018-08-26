@@ -17,6 +17,10 @@
 		FC40927B211D9847009E8D5E /* TradeIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409275211D9846009E8D5E /* TradeIn.storyboard */; };
 		FC40927C211D9847009E8D5E /* Rebound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409277211D9846009E8D5E /* Rebound.storyboard */; };
 		FC40927D211D9847009E8D5E /* Curhat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409279211D9847009E8D5E /* Curhat.storyboard */; };
+		FC6E243F21323AB000F180F8 /* CurhatCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E243E21323AB000F180F8 /* CurhatCommentsViewController.swift */; };
+		FC6E244121323BCA00F180F8 /* CurhatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244021323BCA00F180F8 /* CurhatTableViewCell.swift */; };
+		FC6E244321323C0B00F180F8 /* CurhatCommetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244221323C0B00F180F8 /* CurhatCommetsTableViewCell.swift */; };
+		FC6E244521324A3200F180F8 /* CurhatPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		FC409276211D9846009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TradeIn.storyboard; sourceTree = "<group>"; };
 		FC409278211D9846009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Rebound.storyboard; sourceTree = "<group>"; };
 		FC40927A211D9847009E8D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Curhat.storyboard; sourceTree = "<group>"; };
+		FC6E243E21323AB000F180F8 /* CurhatCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurhatCommentsViewController.swift; path = ex/CurhatCommentsViewController.swift; sourceTree = SOURCE_ROOT; };
+		FC6E244021323BCA00F180F8 /* CurhatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurhatTableViewCell.swift; path = ex/CurhatTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		FC6E244221323C0B00F180F8 /* CurhatCommetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatCommetsTableViewCell.swift; sourceTree = "<group>"; };
+		FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatPostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,10 @@
 				FC40924F211D4A97009E8D5E /* ReboundController.swift */,
 				FC409266211D7C7A009E8D5E /* TradeInController.swift */,
 				FC409268211D7C96009E8D5E /* CurhatController.swift */,
+				FC6E244021323BCA00F180F8 /* CurhatTableViewCell.swift */,
+				FC6E243E21323AB000F180F8 /* CurhatCommentsViewController.swift */,
+				FC6E244221323C0B00F180F8 /* CurhatCommetsTableViewCell.swift */,
+				FC6E244421324A3200F180F8 /* CurhatPostViewController.swift */,
 				FC40925F211D4AC6009E8D5E /* Storyboards */,
 				FC409254211D4A9A009E8D5E /* Assets.xcassets */,
 				FC409259211D4A9A009E8D5E /* Info.plist */,
@@ -161,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6E244321323C0B00F180F8 /* CurhatCommetsTableViewCell.swift in Sources */,
+				FC6E244121323BCA00F180F8 /* CurhatTableViewCell.swift in Sources */,
 				FC409269211D7C96009E8D5E /* CurhatController.swift in Sources */,
 				FC409267211D7C7A009E8D5E /* TradeInController.swift in Sources */,
+				FC6E243F21323AB000F180F8 /* CurhatCommentsViewController.swift in Sources */,
+				FC6E244521324A3200F180F8 /* CurhatPostViewController.swift in Sources */,
 				FC409250211D4A97009E8D5E /* ReboundController.swift in Sources */,
 				FC40924E211D4A97009E8D5E /* AppDelegate.swift in Sources */,
 			);
