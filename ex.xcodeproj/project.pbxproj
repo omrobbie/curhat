@@ -220,6 +220,29 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		ACAEF0EC2133CC4200578BCF /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0ED2133CC5300578BCF /* Login */,
+				ACAEF0EE2133CC5C00578BCF /* Register */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		ACAEF0ED2133CC5300578BCF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ACAEF0EE2133CC5C00578BCF /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		C7EAFB9F9FD2A7E8AF0BB6F1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,10 +278,11 @@
 				FC6E244D21328B6800F180F8 /* Model */,
 				FC40925F211D4AC6009E8D5E /* Main */,
 				ACAEF0E72133A7BB00578BCF /* Intro */,
+				ACAEF0EC2133CC4200578BCF /* Auth */,
+				ACAEF0E92133AAFB00578BCF /* Profile */,
 				FC6E2449213286A900F180F8 /* Rebound */,
 				FC6E244A213286B300F180F8 /* TradeIn */,
 				FC6E2446213252A200F180F8 /* Curhat */,
-				ACAEF0E92133AAFB00578BCF /* Profile */,
 				ACAEF0E82133AACA00578BCF /* Api Client */,
 			);
 			path = ex;
