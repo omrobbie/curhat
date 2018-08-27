@@ -26,7 +26,7 @@ extension ReboundListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewReboundList.dequeueReusableCell(withIdentifier: "cellReboundList", for: indexPath) as! ReboundListTableViewCell
+        let cell = tableViewReboundList.dequeueReusableCell(withIdentifier: CellIdentifier.ReboundList, for: indexPath) as! ReboundListTableViewCell
         
         return cell
     }

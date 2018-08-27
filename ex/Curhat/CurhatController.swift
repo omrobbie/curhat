@@ -18,7 +18,6 @@ class CurhatController: UIViewController, UITableViewDelegate {
     var curhats = [Curhat]()
     
     var db: Firestore?
-    
     var curhatReference: CollectionReference?
     var curhatListerner: ListenerRegistration?
     
@@ -40,7 +39,7 @@ class CurhatController: UIViewController, UITableViewDelegate {
 
         self.db = Firestore.firestore()
         
-        self.curhatReference = db?.collection("curhat")
+        self.curhatReference = db?.collection(CollectionPath.curhats)
         self.curhatListerner = curhatReference?.addSnapshotListener({ (querySnapshot, error) in
             guard let snapshot = querySnapshot else {return}
             
@@ -64,7 +63,7 @@ class CurhatController: UIViewController, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CurhatComments",
+        if segue.identifier == SegueIdentifier.CurhatComments,
             let destination = segue.destination as? CurhatCommentViewController,
             let index = tableViewCurhat.indexPathForSelectedRow?.row {
                 destination.curhat = curhats[index]
@@ -103,7 +102,7 @@ extension CurhatController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewCurhat.dequeueReusableCell(withIdentifier: "cellCurhat", for: indexPath) as! CurhatTableViewCell
+        let cell = tableViewCurhat.dequeueReusableCell(withIdentifier: CellIdentifier.Curhat, for: indexPath) as! CurhatTableViewCell
         let qty = curhats[indexPath.row].comments
         let comment = "\(qty!) comment"
 
@@ -115,6 +114,6 @@ extension CurhatController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "CurhatComments", sender: indexPath)
+        performSegue(withIdentifier: SegueIdentifier.CurhatComments, sender: indexPath)
     }
 }

@@ -23,7 +23,6 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
     var curhatComments = [CurhatComment]()
     
     var db: Firestore?
-    
     var curhatReference: CollectionReference?
     var curhatCommentsReference: CollectionReference?
     var curhatCommentsListerner: ListenerRegistration?
@@ -53,9 +52,9 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         self.txtTitleEmpty.font = UIFont(name: "Nunito-Bold", size: 24.0) ?? UIFont.boldSystemFont(ofSize: 24.0)
         
         self.db = Firestore.firestore()
-        self.curhatReference = db?.collection("curhat")
+        self.curhatReference = db?.collection(CollectionPath.curhats)
         
-        self.curhatCommentsReference = db?.collection(["curhat", self.curhat.id!, "comments"].joined(separator: "/"))
+        self.curhatCommentsReference = db?.collection([CollectionPath.curhats, self.curhat.id!, CollectionPath.comments].joined(separator: "/"))
         self.curhatCommentsListerner = curhatCommentsReference?.addSnapshotListener({ (querySnapshot, error) in
             guard let snapshot = querySnapshot else {return}
             
@@ -63,8 +62,8 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
 
             snapshot.documentChanges.forEach({ (documentChange) in
                 guard let curhatComment = CurhatComment(document: documentChange.document) else {return}
-                
-                self.curhatReference?.document(self.curhat.id!).updateData(["comments" : snapshot.count])
+            
+                self.curhatReference?.document(self.curhat.id!).updateData([CollectionPath.comments : snapshot.count])
                 
                 switch documentChange.type {
                 case .added:
@@ -93,7 +92,7 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         ]
         
         self.txtComment.text = ""
-        self.curhatReference?.document(self.curhat.id!).collection("comments").addDocument(data: docData)
+    self.curhatReference?.document(self.curhat.id!).collection(CollectionPath.comments).addDocument(data: docData)
     }
     
     func addList(_ curhatComment: CurhatComment) {
@@ -150,7 +149,7 @@ extension CurhatCommentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewCurhatComments.dequeueReusableCell(withIdentifier: "cellCurhatComment", for: indexPath) as! CurhatCommentTableViewCell
+        let cell = tableViewCurhatComments.dequeueReusableCell(withIdentifier: CellIdentifier.CurhatComment, for: indexPath) as! CurhatCommentTableViewCell
         
         cell.txtNickname.text = curhatComments[indexPath.row].nickname
         cell.txtComment.text = curhatComments[indexPath.row].comment

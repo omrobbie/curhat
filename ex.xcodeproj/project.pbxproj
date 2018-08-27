@@ -45,6 +45,7 @@
 		FC6E245121328F0700F180F8 /* DatabaseReperesentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */; };
 		FC6E76B721341E4A00288E80 /* ReboundListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E76B621341E4A00288E80 /* ReboundListViewController.swift */; };
 		FC6E76B921341F6E00288E80 /* ReboundListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E76B821341F6E00288E80 /* ReboundListTableViewCell.swift */; };
+		FC6E76BB2134669F00288E80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E76BA2134669F00288E80 /* Constants.swift */; };
 		FCA6EAA02133163000CCA6B7 /* CurhatComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6EA9F2133163000CCA6B7 /* CurhatComment.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseReperesentation.swift; sourceTree = "<group>"; };
 		FC6E76B621341E4A00288E80 /* ReboundListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReboundListViewController.swift; sourceTree = "<group>"; };
 		FC6E76B821341F6E00288E80 /* ReboundListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReboundListTableViewCell.swift; sourceTree = "<group>"; };
+		FC6E76BA2134669F00288E80 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FCA6EA9F2133163000CCA6B7 /* CurhatComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatComment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 				ACAEF0CD2133A6A500578BCF /* Images.swift */,
 				ACAEF0CA2133A6A500578BCF /* ConstraintsHelper.swift */,
 				ACAEF0CB2133A6A500578BCF /* Configuring.swift */,
+				FC6E76BA2134669F00288E80 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				ACAEF0DA2133A6A600578BCF /* Configuring.swift in Sources */,
 				ACAEF0D72133A6A600578BCF /* GestureControl.swift in Sources */,
 				ACAEF0D62133A6A600578BCF /* PaperOnboardingDataSource.swift in Sources */,
+				FC6E76BB2134669F00288E80 /* Constants.swift in Sources */,
 				FC409267211D7C7A009E8D5E /* TradeInController.swift in Sources */,
 				FC6E243F21323AB000F180F8 /* CurhatCommentViewController.swift in Sources */,
 				FC6E244521324A3200F180F8 /* CurhatPostViewController.swift in Sources */,

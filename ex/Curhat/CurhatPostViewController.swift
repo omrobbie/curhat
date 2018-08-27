@@ -13,7 +13,7 @@ class CurhatPostViewController: UIViewController {
 
     @IBOutlet weak var txtFeeling: UITextView!
     
-    let placeholderText = "Type your feelings here.."
+    let placeholderText = "Type your feeling here.."
     
     var db: Firestore?
     
@@ -31,7 +31,7 @@ class CurhatPostViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightBarButton
         
         self.db = Firestore.firestore()
-        self.curhatReference = db?.collection("curhat")
+        self.curhatReference = db?.collection(CollectionPath.curhats)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
