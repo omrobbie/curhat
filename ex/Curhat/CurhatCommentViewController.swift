@@ -16,6 +16,8 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var txtComment: UITextField!
     @IBOutlet weak var txtNickname: UILabel!
     @IBOutlet weak var txtFeeling: UILabel!
+    @IBOutlet weak var txtTitleEmpty: UILabel!
+    @IBOutlet weak var viewEmpty: UIView!
     
     var curhat = Curhat()
     var curhatComments = [CurhatComment]()
@@ -48,6 +50,8 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         self.txtNickname.text = self.curhat.nickname
         self.txtFeeling.text = self.curhat.feeling
         
+        self.txtTitleEmpty.font = UIFont(name: "Nunito-Bold", size: 24.0) ?? UIFont.boldSystemFont(ofSize: 24.0)
+        
         self.db = Firestore.firestore()
         self.curhatReference = db?.collection("curhat")
         
@@ -55,6 +59,8 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         self.curhatCommentsListerner = curhatCommentsReference?.addSnapshotListener({ (querySnapshot, error) in
             guard let snapshot = querySnapshot else {return}
             
+            self.viewEmpty.isHidden = snapshot.count > 0 ? true : false
+
             snapshot.documentChanges.forEach({ (documentChange) in
                 guard let curhatComment = CurhatComment(document: documentChange.document) else {return}
                 

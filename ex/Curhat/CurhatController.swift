@@ -12,6 +12,8 @@ import FirebaseFirestore
 class CurhatController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableViewCurhat: UITableView!
+    @IBOutlet weak var txtTitleEmpty: UILabel!
+    @IBOutlet weak var viewEmpty: UIView!
     
     var curhats = [Curhat]()
     
@@ -34,12 +36,16 @@ class CurhatController: UIViewController, UITableViewDelegate {
         self.tableViewCurhat.delegate = self
         self.tableViewCurhat.dataSource = self
         
+        self.txtTitleEmpty.font = UIFont(name: "Nunito-Bold", size: 24.0) ?? UIFont.boldSystemFont(ofSize: 24.0)
+
         self.db = Firestore.firestore()
         
         self.curhatReference = db?.collection("curhat")
         self.curhatListerner = curhatReference?.addSnapshotListener({ (querySnapshot, error) in
             guard let snapshot = querySnapshot else {return}
             
+            self.viewEmpty.isHidden = snapshot.count > 0 ? true : false
+
             snapshot.documentChanges.forEach({ (documentChange) in
                 guard let curhat = Curhat(document: documentChange.document) else {return}
                 

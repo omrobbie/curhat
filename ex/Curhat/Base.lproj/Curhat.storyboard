@@ -90,12 +90,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96S-nZ-nOc">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_message" translatesAutoresizingMaskIntoConstraints="NO" id="u9T-Ep-ROK">
+                                        <rect key="frame" x="67" y="174" width="240" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty Curhat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umx-Zb-KnQ">
+                                        <rect key="frame" x="67" y="405" width="240" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Be the first to post a new curhat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Py-AF-v7v">
+                                        <rect key="frame" x="84" y="450" width="207" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="96S-nZ-nOc" firstAttribute="bottom" secondItem="adH-0y-4Jb" secondAttribute="bottom" id="3KC-8V-4nB"/>
+                            <constraint firstItem="96S-nZ-nOc" firstAttribute="leading" secondItem="adH-0y-4Jb" secondAttribute="leading" id="4oG-N7-np1"/>
                             <constraint firstItem="adH-0y-4Jb" firstAttribute="bottom" secondItem="uMb-Wc-36o" secondAttribute="bottom" id="AxH-Qh-ggU"/>
                             <constraint firstItem="adH-0y-4Jb" firstAttribute="trailing" secondItem="uMb-Wc-36o" secondAttribute="trailing" id="PR1-dv-hqj"/>
                             <constraint firstItem="uMb-Wc-36o" firstAttribute="leading" secondItem="adH-0y-4Jb" secondAttribute="leading" id="WKz-1Z-678"/>
+                            <constraint firstItem="96S-nZ-nOc" firstAttribute="top" secondItem="adH-0y-4Jb" secondAttribute="top" id="hen-n3-hA2"/>
+                            <constraint firstItem="96S-nZ-nOc" firstAttribute="trailing" secondItem="adH-0y-4Jb" secondAttribute="trailing" id="i88-xX-CQo"/>
                             <constraint firstItem="uMb-Wc-36o" firstAttribute="top" secondItem="adH-0y-4Jb" secondAttribute="top" id="yrC-H8-Mpa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="adH-0y-4Jb"/>
@@ -121,6 +149,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewCurhat" destination="uMb-Wc-36o" id="PNv-NR-oYb"/>
+                        <outlet property="txtTitleEmpty" destination="umx-Zb-KnQ" id="0xv-X5-7is"/>
+                        <outlet property="viewEmpty" destination="96S-nZ-nOc" id="TpH-vb-DcU"/>
                         <segue destination="U7Y-Pc-HWL" kind="show" identifier="CurhatComments" id="I1k-8L-PYb"/>
                     </connections>
                 </viewController>
@@ -286,6 +316,30 @@
                                     <constraint firstAttribute="bottom" secondItem="Qof-CN-l1l" secondAttribute="bottom" constant="8" id="xLI-fb-2q9"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-5d-KtZ">
+                                <rect key="frame" x="0.0" y="148" width="375" height="535"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_message" translatesAutoresizingMaskIntoConstraints="NO" id="RsI-wc-Pql">
+                                        <rect key="frame" x="67" y="45" width="240" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty Comment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPX-W9-Umf">
+                                        <rect key="frame" x="67" y="276" width="240" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Be the first to post a new comment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWX-8r-MvM">
+                                        <rect key="frame" x="74" y="321" width="227" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,13 +349,17 @@
                             <constraint firstItem="ttl-ae-3Tl" firstAttribute="trailing" secondItem="weL-gn-T45" secondAttribute="trailing" id="7h7-Bf-vGn"/>
                             <constraint firstItem="UcO-IR-gtE" firstAttribute="trailing" secondItem="weL-gn-T45" secondAttribute="trailing" id="8cl-vj-Mmp"/>
                             <constraint firstItem="kwz-8w-eCs" firstAttribute="top" secondItem="VcI-ZK-q4V" secondAttribute="bottom" constant="8" id="HQI-KF-TVV"/>
+                            <constraint firstItem="FdO-5d-KtZ" firstAttribute="leading" secondItem="weL-gn-T45" secondAttribute="leading" id="JRT-6l-Eys"/>
                             <constraint firstItem="weL-gn-T45" firstAttribute="trailing" secondItem="VcI-ZK-q4V" secondAttribute="trailing" constant="16" id="MvI-LS-BZX"/>
+                            <constraint firstItem="FdO-5d-KtZ" firstAttribute="top" secondItem="UcO-IR-gtE" secondAttribute="bottom" id="NRc-lc-KS0"/>
                             <constraint firstItem="UcO-IR-gtE" firstAttribute="leading" secondItem="weL-gn-T45" secondAttribute="leading" id="Ofd-Xh-a6K"/>
                             <constraint firstItem="VcI-ZK-q4V" firstAttribute="top" secondItem="UcO-IR-gtE" secondAttribute="bottom" constant="8" id="Oht-bY-uCZ"/>
                             <constraint firstItem="VcI-ZK-q4V" firstAttribute="leading" secondItem="weL-gn-T45" secondAttribute="leading" constant="16" id="QdE-HQ-LH9"/>
                             <constraint firstItem="kwz-8w-eCs" firstAttribute="trailing" secondItem="weL-gn-T45" secondAttribute="trailing" id="RJw-pP-pK0"/>
                             <constraint firstItem="kwz-8w-eCs" firstAttribute="leading" secondItem="weL-gn-T45" secondAttribute="leading" id="SJc-63-foR"/>
                             <constraint firstItem="ttl-ae-3Tl" firstAttribute="top" secondItem="kwz-8w-eCs" secondAttribute="bottom" id="ogn-Vo-t1a"/>
+                            <constraint firstItem="FdO-5d-KtZ" firstAttribute="trailing" secondItem="weL-gn-T45" secondAttribute="trailing" id="p4c-3g-Wa9"/>
+                            <constraint firstItem="ttl-ae-3Tl" firstAttribute="top" secondItem="FdO-5d-KtZ" secondAttribute="bottom" id="rc0-ZJ-Vnb"/>
                             <constraint firstItem="ttl-ae-3Tl" firstAttribute="leading" secondItem="weL-gn-T45" secondAttribute="leading" id="sol-ro-Ns4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="weL-gn-T45"/>
@@ -312,11 +370,13 @@
                         <outlet property="txtComment" destination="4eP-G4-EaP" id="iS5-dg-wAN"/>
                         <outlet property="txtFeeling" destination="5PE-Qq-cWh" id="8mU-bK-S9k"/>
                         <outlet property="txtNickname" destination="yz2-Gu-ps6" id="Odi-9l-NDD"/>
+                        <outlet property="txtTitleEmpty" destination="dPX-W9-Umf" id="Nbw-6L-vrg"/>
+                        <outlet property="viewEmpty" destination="FdO-5d-KtZ" id="EsH-Na-taE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVa-qR-E00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2676" y="1862"/>
+            <point key="canvasLocation" x="2676" y="1861.3300492610838"/>
         </scene>
         <!--Curhat-->
         <scene sceneID="8Iz-21-VH1">
@@ -349,6 +409,7 @@
     </scenes>
     <resources>
         <image name="comment_icon_label" width="15" height="12"/>
+        <image name="no_message" width="820" height="698"/>
         <image name="tabbar_curhat_icon" width="56" height="56"/>
     </resources>
 </document>
