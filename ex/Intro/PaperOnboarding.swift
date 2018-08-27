@@ -34,7 +34,6 @@ public struct OnboardingItemInfo {
 
 /// An instance of PaperOnboarding which display collection of information.
 open class PaperOnboarding: UIView {
-
     ///  The object that acts as the data source of the  PaperOnboardingDataSource.
     @IBOutlet weak open var dataSource: AnyObject? {
         didSet {
@@ -80,7 +79,6 @@ open class PaperOnboarding: UIView {
 // MARK: methods
 
 public extension PaperOnboarding {
-
     /**
      Scrolls through the PaperOnboarding until a index is at a particular location on the screen.
 
@@ -112,7 +110,6 @@ public extension PaperOnboarding {
 // MARK: create
 
 extension PaperOnboarding {
-
     fileprivate func commonInit() {
         if case let dataSource as PaperOnboardingDataSource = dataSource {
             itemsCount = dataSource.onboardingItemsCount()
@@ -188,7 +185,6 @@ extension PaperOnboarding {
 // MARK: helpers
 
 extension PaperOnboarding {
-
     fileprivate func backgroundColor(_ index: Int) -> UIColor {
         guard let color = itemsInfo?[index].color else {
             return .black
@@ -200,7 +196,6 @@ extension PaperOnboarding {
 // MARK: GestureControlDelegate
 
 extension PaperOnboarding: GestureControlDelegate {
-
     func gestureControlDidSwipe(_ direction: UISwipeGestureRecognizerDirection) {
         switch direction {
         case UISwipeGestureRecognizerDirection.right:
@@ -216,7 +211,6 @@ extension PaperOnboarding: GestureControlDelegate {
 // MARK: OnboardingDelegate
 
 extension PaperOnboarding: OnboardingContentViewDelegate {
-
     func onboardingItemAtIndex(_ index: Int) -> OnboardingItemInfo? {
         return itemsInfo?[index]
     }

@@ -120,19 +120,15 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
-            print("Show Keyboard")
             self.bottomConstraint.constant = -(keyboardFrame.size.height - 34)
         })
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
-            print("Hide Keyboard")
             self.bottomConstraint.constant = 0
         })
     }
-    
-    
 }
 
 extension CurhatCommentViewController: UITextFieldDelegate {
@@ -166,7 +162,5 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
-        print("tap")
     }
 }
-

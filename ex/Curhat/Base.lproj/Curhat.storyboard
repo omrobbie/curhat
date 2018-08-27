@@ -46,7 +46,7 @@
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6nS-Lx-WOC">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment_icon_label" translatesAutoresizingMaskIntoConstraints="NO" id="6nS-Lx-WOC">
                                                             <rect key="frame" x="329" y="0.0" width="16" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="16" id="aJS-JQ-qhd"/>
@@ -348,6 +348,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="comment_icon_label" width="15" height="12"/>
         <image name="tabbar_curhat_icon" width="56" height="56"/>
     </resources>
 </document>
