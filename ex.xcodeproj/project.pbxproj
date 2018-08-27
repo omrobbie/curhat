@@ -184,7 +184,6 @@
 		ACAEF0DC2133A6C600578BCF /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				ACAEF0EA2133ACD100578BCF /* Assets.xcassets */,
 				ACAEF0DD2133A6C600578BCF /* Nunito-Light.ttf */,
 				ACAEF0DE2133A6C600578BCF /* Nunito-Regular.ttf */,
 				ACAEF0DF2133A6C600578BCF /* Nunito-Bold.ttf */,
@@ -312,6 +311,7 @@
 		FC6E24482132861B00F180F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACAEF0EA2133ACD100578BCF /* Assets.xcassets */,
 				ACAEF0DC2133A6C600578BCF /* fonts */,
 				FC409256211D4A9A009E8D5E /* LaunchScreen.storyboard */,
 				FC40924D211D4A97009E8D5E /* AppDelegate.swift */,
