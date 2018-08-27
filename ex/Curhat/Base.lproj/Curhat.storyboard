@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uMb-Wc-36o">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCurhat" rowHeight="75" id="bUq-HM-fUh" customClass="CurhatTableViewCell" customModule="ex" customModuleProvider="target">
@@ -91,7 +90,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96S-nZ-nOc">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="597"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_message" translatesAutoresizingMaskIntoConstraints="NO" id="u9T-Ep-ROK">
                                         <rect key="frame" x="67" y="174" width="240" height="210"/>
@@ -128,25 +127,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="adH-0y-4Jb"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Curhat" id="PsX-WG-7Sy">
-                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="QQI-kN-8xB">
+                        <barButtonItem key="leftBarButtonItem" image="navbar_newpost_icon" id="QQI-kN-8xB">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="H5v-Hf-hej" kind="show" id="IKc-1p-M1A"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem id="SMP-hy-f8W"/>
-                            <barButtonItem title="Profile" id="Kdi-Iq-bTl">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="navbar_userprofile" id="O4x-jX-Y4Y"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableViewCurhat" destination="uMb-Wc-36o" id="PNv-NR-oYb"/>
                         <outlet property="txtTitleEmpty" destination="umx-Zb-KnQ" id="0xv-X5-7is"/>
@@ -167,10 +163,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIn-mU-AFA">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="597"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type your feelings here.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CF9-OH-QSO">
-                                        <rect key="frame" x="8" y="8" width="359" height="625"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="581"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -240,7 +236,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kwz-8w-eCs">
-                                <rect key="frame" x="0.0" y="193" width="375" height="490"/>
+                                <rect key="frame" x="0.0" y="193" width="375" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCurhatComment" rowHeight="69" id="7yb-jz-ikH" customClass="CurhatCommentTableViewCell" customModule="ex" customModuleProvider="target">
@@ -287,7 +283,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-ae-3Tl" userLabel="viewComment">
-                                <rect key="frame" x="0.0" y="683" width="375" height="46"/>
+                                <rect key="frame" x="0.0" y="639" width="375" height="46"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eP-G4-EaP">
                                         <rect key="frame" x="8" y="8" width="315" height="30"/>
@@ -317,7 +313,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-5d-KtZ">
-                                <rect key="frame" x="0.0" y="148" width="375" height="535"/>
+                                <rect key="frame" x="0.0" y="148" width="375" height="491"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_message" translatesAutoresizingMaskIntoConstraints="NO" id="RsI-wc-Pql">
                                         <rect key="frame" x="67" y="45" width="240" height="210"/>
@@ -409,6 +405,8 @@
     </scenes>
     <resources>
         <image name="comment_icon_label" width="15" height="12"/>
+        <image name="navbar_newpost_icon" width="56" height="56"/>
+        <image name="navbar_userprofile" width="56" height="56"/>
         <image name="no_message" width="820" height="698"/>
         <image name="tabbar_curhat_icon" width="56" height="56"/>
     </resources>

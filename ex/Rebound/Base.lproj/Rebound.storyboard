@@ -20,7 +20,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="B9i-kR-mqD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Rebound" id="OwT-vM-xZ1"/>
+                    <navigationItem key="navigationItem" title="Rebound" id="OwT-vM-xZ1">
+                        <barButtonItem key="leftBarButtonItem" image="navbar_rebound_list" id="a3B-Gh-ctO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="navbar_userprofile" id="kgl-9e-z9X">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaV-1M-s21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,6 +68,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="navbar_rebound_list" width="56" height="56"/>
+        <image name="navbar_userprofile" width="56" height="56"/>
         <image name="tabbar_rebound_icon" width="56" height="56"/>
     </resources>
 </document>
