@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lMT-2R-kZR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ILC-vT-CwF">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="BER-vb-qAe">
+            <objects>
+                <viewController id="ILC-vT-CwF" customClass="IntroViewController" customModule="ex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xru-3d-dXx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhi-0q-jv6">
+                                <rect key="frame" x="329" y="44" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="OMR-wM-gDf"/>
+                                </constraints>
+                                <state key="normal" title="skip">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonTapped:" destination="ILC-vT-CwF" eventType="touchUpInside" id="i6l-qW-z8F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zhi-0q-jv6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xru-3d-dXx" secondAttribute="leading" id="R6Z-9t-CLQ"/>
+                            <constraint firstItem="zhi-0q-jv6" firstAttribute="top" secondItem="Xru-3d-dXx" secondAttribute="top" constant="44" id="oaj-HX-kce"/>
+                            <constraint firstItem="gnc-ha-JIy" firstAttribute="trailing" secondItem="zhi-0q-jv6" secondAttribute="trailing" constant="16" id="om9-0l-BZC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gnc-ha-JIy"/>
+                    </view>
+                    <connections>
+                        <outlet property="skipButton" destination="zhi-0q-jv6" id="3HS-UA-I3R"/>
+                        <segue destination="lMT-2R-kZR" kind="show" identifier="gotomainmenu" id="onG-gV-n5t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5D3-dI-eXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-847" y="58"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wjC-z1-vQ5">
             <objects>

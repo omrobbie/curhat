@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		314502E854EBCD44D2E2D6FC /* Pods_ex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC21470480D4C42ABF779428 /* Pods_ex.framework */; };
+		ACAEF0CE2133A6A500578BCF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACAEF0B62133A6A500578BCF /* Info.plist */; };
+		ACAEF0CF2133A6A600578BCF /* PageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0BA2133A6A500578BCF /* PageContainer.swift */; };
+		ACAEF0D02133A6A600578BCF /* PageViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0BC2133A6A500578BCF /* PageViewItem.swift */; };
+		ACAEF0D12133A6A600578BCF /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0BD2133A6A500578BCF /* PageView.swift */; };
+		ACAEF0D22133A6A600578BCF /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0BF2133A6A500578BCF /* OnboardingContentView.swift */; };
+		ACAEF0D32133A6A600578BCF /* OnboardingContantViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0C12133A6A500578BCF /* OnboardingContantViewItem.swift */; };
+		ACAEF0D42133A6A600578BCF /* PaperOnboardingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0C22133A6A500578BCF /* PaperOnboardingDelegate.swift */; };
+		ACAEF0D52133A6A600578BCF /* FillAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0C42133A6A500578BCF /* FillAnimationView.swift */; };
+		ACAEF0D62133A6A600578BCF /* PaperOnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0C52133A6A500578BCF /* PaperOnboardingDataSource.swift */; };
+		ACAEF0D72133A6A600578BCF /* GestureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0C72133A6A500578BCF /* GestureControl.swift */; };
+		ACAEF0D82133A6A600578BCF /* PaperOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0C82133A6A500578BCF /* PaperOnboarding.swift */; };
+		ACAEF0D92133A6A600578BCF /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0CA2133A6A500578BCF /* ConstraintsHelper.swift */; };
+		ACAEF0DA2133A6A600578BCF /* Configuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0CB2133A6A500578BCF /* Configuring.swift */; };
+		ACAEF0DB2133A6A600578BCF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0CD2133A6A500578BCF /* Images.swift */; };
+		ACAEF0E12133A6C600578BCF /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACAEF0DD2133A6C600578BCF /* Nunito-Light.ttf */; };
+		ACAEF0E22133A6C600578BCF /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACAEF0DE2133A6C600578BCF /* Nunito-Regular.ttf */; };
+		ACAEF0E32133A6C600578BCF /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACAEF0DF2133A6C600578BCF /* Nunito-Bold.ttf */; };
+		ACAEF0E42133A6C600578BCF /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACAEF0E02133A6C600578BCF /* OpenSans-Regular.ttf */; };
+		ACAEF0E62133A6F800578BCF /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0E52133A6F800578BCF /* IntroViewController.swift */; };
 		FC40924E211D4A97009E8D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40924D211D4A97009E8D5E /* AppDelegate.swift */; };
 		FC409250211D4A97009E8D5E /* ReboundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40924F211D4A97009E8D5E /* ReboundController.swift */; };
 		FC409253211D4A97009E8D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409251211D4A97009E8D5E /* Main.storyboard */; };
@@ -31,6 +50,26 @@
 /* Begin PBXFileReference section */
 		482692B00A75BE40B0E17BBC /* Pods-ex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ex/Pods-ex.debug.xcconfig"; sourceTree = "<group>"; };
 		7412AE287A3EA81DC90A52EB /* Pods-ex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ex.release.xcconfig"; path = "Pods/Target Support Files/Pods-ex/Pods-ex.release.xcconfig"; sourceTree = "<group>"; };
+		ACAEF0B52133A6A500578BCF /* PaperOnboarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperOnboarding.h; sourceTree = "<group>"; };
+		ACAEF0B62133A6A500578BCF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACAEF0BA2133A6A500578BCF /* PageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContainer.swift; sourceTree = "<group>"; };
+		ACAEF0BC2133A6A500578BCF /* PageViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewItem.swift; sourceTree = "<group>"; };
+		ACAEF0BD2133A6A500578BCF /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		ACAEF0BF2133A6A500578BCF /* OnboardingContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		ACAEF0C12133A6A500578BCF /* OnboardingContantViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContantViewItem.swift; sourceTree = "<group>"; };
+		ACAEF0C22133A6A500578BCF /* PaperOnboardingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDelegate.swift; sourceTree = "<group>"; };
+		ACAEF0C42133A6A500578BCF /* FillAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillAnimationView.swift; sourceTree = "<group>"; };
+		ACAEF0C52133A6A500578BCF /* PaperOnboardingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboardingDataSource.swift; sourceTree = "<group>"; };
+		ACAEF0C72133A6A500578BCF /* GestureControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureControl.swift; sourceTree = "<group>"; };
+		ACAEF0C82133A6A500578BCF /* PaperOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperOnboarding.swift; sourceTree = "<group>"; };
+		ACAEF0CA2133A6A500578BCF /* ConstraintsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHelper.swift; sourceTree = "<group>"; };
+		ACAEF0CB2133A6A500578BCF /* Configuring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuring.swift; sourceTree = "<group>"; };
+		ACAEF0CD2133A6A500578BCF /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		ACAEF0DD2133A6C600578BCF /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		ACAEF0DE2133A6C600578BCF /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		ACAEF0DF2133A6C600578BCF /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		ACAEF0E02133A6C600578BCF /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		ACAEF0E52133A6F800578BCF /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		DC21470480D4C42ABF779428 /* Pods_ex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40924A211D4A97009E8D5E /* ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40924D211D4A97009E8D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +113,125 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ACAEF0B42133A6A500578BCF /* PaperOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0B52133A6A500578BCF /* PaperOnboarding.h */,
+				ACAEF0B62133A6A500578BCF /* Info.plist */,
+			);
+			path = PaperOnboarding;
+			sourceTree = "<group>";
+		};
+		ACAEF0B72133A6A500578BCF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0B82133A6A500578BCF /* PageView */,
+				ACAEF0BE2133A6A500578BCF /* OnboardingContentView */,
+				ACAEF0C22133A6A500578BCF /* PaperOnboardingDelegate.swift */,
+				ACAEF0C32133A6A500578BCF /* FillAnimationView */,
+				ACAEF0C52133A6A500578BCF /* PaperOnboardingDataSource.swift */,
+				ACAEF0C62133A6A500578BCF /* GestureControl */,
+				ACAEF0C82133A6A500578BCF /* PaperOnboarding.swift */,
+				ACAEF0C92133A6A500578BCF /* Helpers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		ACAEF0B82133A6A500578BCF /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0B92133A6A500578BCF /* PageContainerView */,
+				ACAEF0BB2133A6A500578BCF /* Item */,
+				ACAEF0BD2133A6A500578BCF /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		ACAEF0B92133A6A500578BCF /* PageContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0BA2133A6A500578BCF /* PageContainer.swift */,
+			);
+			path = PageContainerView;
+			sourceTree = "<group>";
+		};
+		ACAEF0BB2133A6A500578BCF /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0BC2133A6A500578BCF /* PageViewItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		ACAEF0BE2133A6A500578BCF /* OnboardingContentView */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0BF2133A6A500578BCF /* OnboardingContentView.swift */,
+				ACAEF0C02133A6A500578BCF /* Item */,
+			);
+			path = OnboardingContentView;
+			sourceTree = "<group>";
+		};
+		ACAEF0C02133A6A500578BCF /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0C12133A6A500578BCF /* OnboardingContantViewItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		ACAEF0C32133A6A500578BCF /* FillAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0C42133A6A500578BCF /* FillAnimationView.swift */,
+			);
+			path = FillAnimationView;
+			sourceTree = "<group>";
+		};
+		ACAEF0C62133A6A500578BCF /* GestureControl */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0C72133A6A500578BCF /* GestureControl.swift */,
+			);
+			path = GestureControl;
+			sourceTree = "<group>";
+		};
+		ACAEF0C92133A6A500578BCF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0CA2133A6A500578BCF /* ConstraintsHelper.swift */,
+				ACAEF0CB2133A6A500578BCF /* Configuring.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ACAEF0CC2133A6A500578BCF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0CD2133A6A500578BCF /* Images.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		ACAEF0DC2133A6C600578BCF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0DD2133A6C600578BCF /* Nunito-Light.ttf */,
+				ACAEF0DE2133A6C600578BCF /* Nunito-Regular.ttf */,
+				ACAEF0DF2133A6C600578BCF /* Nunito-Bold.ttf */,
+				ACAEF0E02133A6C600578BCF /* OpenSans-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		ACAEF0E72133A7BB00578BCF /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				ACAEF0E52133A6F800578BCF /* IntroViewController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 		C7EAFB9F9FD2A7E8AF0BB6F1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +244,9 @@
 		FC409241211D4A97009E8D5E = {
 			isa = PBXGroup;
 			children = (
+				ACAEF0CC2133A6A500578BCF /* Constants */,
+				ACAEF0B42133A6A500578BCF /* PaperOnboarding */,
+				ACAEF0B72133A6A500578BCF /* Source */,
 				FC40924C211D4A97009E8D5E /* ex */,
 				FC40924B211D4A97009E8D5E /* Products */,
 				C7EAFB9F9FD2A7E8AF0BB6F1 /* Pods */,
@@ -107,6 +268,7 @@
 				FC6E24482132861B00F180F8 /* Supporting Files */,
 				FC6E244D21328B6800F180F8 /* Model */,
 				FC40925F211D4AC6009E8D5E /* Main */,
+				ACAEF0E72133A7BB00578BCF /* Intro */,
 				FC6E2449213286A900F180F8 /* Rebound */,
 				FC6E244A213286B300F180F8 /* TradeIn */,
 				FC6E2446213252A200F180F8 /* Curhat */,
@@ -138,6 +300,7 @@
 		FC6E24482132861B00F180F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACAEF0DC2133A6C600578BCF /* fonts */,
 				FC409254211D4A9A009E8D5E /* Assets.xcassets */,
 				FC409256211D4A9A009E8D5E /* LaunchScreen.storyboard */,
 				FC40924D211D4A97009E8D5E /* AppDelegate.swift */,
@@ -235,12 +398,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAEF0E22133A6C600578BCF /* Nunito-Regular.ttf in Resources */,
+				ACAEF0CE2133A6A500578BCF /* Info.plist in Resources */,
 				FC40927B211D9847009E8D5E /* TradeIn.storyboard in Resources */,
+				ACAEF0E12133A6C600578BCF /* Nunito-Light.ttf in Resources */,
 				FC40927C211D9847009E8D5E /* Rebound.storyboard in Resources */,
 				FC409258211D4A9A009E8D5E /* LaunchScreen.storyboard in Resources */,
+				ACAEF0E32133A6C600578BCF /* Nunito-Bold.ttf in Resources */,
 				FC40927D211D9847009E8D5E /* Curhat.storyboard in Resources */,
 				FC409255211D4A9A009E8D5E /* Assets.xcassets in Resources */,
 				FC409253211D4A97009E8D5E /* Main.storyboard in Resources */,
+				ACAEF0E42133A6C600578BCF /* OpenSans-Regular.ttf in Resources */,
 				FC6E244C213287EB00F180F8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,16 +480,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6E244321323C0B00F180F8 /* CurhatCommentTableViewCell.swift in Sources */,
+				ACAEF0D42133A6A600578BCF /* PaperOnboardingDelegate.swift in Sources */,
 				FC6E245121328F0700F180F8 /* DatabaseReperesentation.swift in Sources */,
 				FC6E244121323BCA00F180F8 /* CurhatTableViewCell.swift in Sources */,
+				ACAEF0D52133A6A600578BCF /* FillAnimationView.swift in Sources */,
 				FC6E244F21328BB800F180F8 /* Curhat.swift in Sources */,
 				FC409269211D7C96009E8D5E /* CurhatController.swift in Sources */,
+				ACAEF0DA2133A6A600578BCF /* Configuring.swift in Sources */,
+				ACAEF0D72133A6A600578BCF /* GestureControl.swift in Sources */,
+				ACAEF0D62133A6A600578BCF /* PaperOnboardingDataSource.swift in Sources */,
 				FC409267211D7C7A009E8D5E /* TradeInController.swift in Sources */,
 				FC6E243F21323AB000F180F8 /* CurhatCommentViewController.swift in Sources */,
 				FC6E244521324A3200F180F8 /* CurhatPostViewController.swift in Sources */,
+				ACAEF0DB2133A6A600578BCF /* Images.swift in Sources */,
+				ACAEF0D92133A6A600578BCF /* ConstraintsHelper.swift in Sources */,
 				FC409250211D4A97009E8D5E /* ReboundController.swift in Sources */,
 				FCA6EAA02133163000CCA6B7 /* CurhatComment.swift in Sources */,
+				ACAEF0D02133A6A600578BCF /* PageViewItem.swift in Sources */,
+				ACAEF0CF2133A6A600578BCF /* PageContainer.swift in Sources */,
 				FC40924E211D4A97009E8D5E /* AppDelegate.swift in Sources */,
+				ACAEF0E62133A6F800578BCF /* IntroViewController.swift in Sources */,
+				ACAEF0D12133A6A600578BCF /* PageView.swift in Sources */,
+				ACAEF0D32133A6A600578BCF /* OnboardingContantViewItem.swift in Sources */,
+				ACAEF0D22133A6A600578BCF /* OnboardingContentView.swift in Sources */,
+				ACAEF0D82133A6A600578BCF /* PaperOnboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +673,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3SMXMP42NY;
+				DEVELOPMENT_TEAM = B4J75524RB;
 				INFOPLIST_FILE = "$(SRCROOT)/ex/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,7 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3SMXMP42NY;
+				DEVELOPMENT_TEAM = B4J75524RB;
 				INFOPLIST_FILE = "$(SRCROOT)/ex/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
