@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +24,9 @@
                     <navigationItem key="navigationItem" title="Rebound" id="OwT-vM-xZ1">
                         <barButtonItem key="leftBarButtonItem" image="navbar_rebound_list" id="a3B-Gh-ctO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="KrL-MI-TMy" kind="show" id="amz-RL-tkQ"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="navbar_userprofile" id="kgl-9e-z9X">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,6 +36,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaV-1M-s21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1893.5999999999999" y="58.374384236453203"/>
+        </scene>
+        <!--Rebound List View Controller-->
+        <scene sceneID="Gfl-U2-k6h">
+            <objects>
+                <viewController id="KrL-MI-TMy" customClass="ReboundListViewController" customModule="ex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="95g-1l-Sa0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="akZ-b8-Iri">
+                                <rect key="frame" x="16" y="100" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Chat"/>
+                                    <segment title="Contact"/>
+                                    <segment title="Pending"/>
+                                </segments>
+                                <color key="tintColor" red="0.74509803919999995" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uae-hB-ubQ">
+                                <rect key="frame" x="0.0" y="136" width="375" height="593"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="593" id="4QF-Bi-Svy"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReboundList" rowHeight="90" id="hgk-V4-4W1" customClass="ReboundListTableViewCell" customModule="ex" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hgk-V4-4W1" id="EhH-IR-BFT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_profile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mw3-o5-gcB">
+                                                    <rect key="frame" x="15" y="11" width="64" height="64"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="gha-GX-vpx"/>
+                                                        <constraint firstAttribute="height" constant="64" id="grw-Jj-JY8"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="32"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otD-Ks-bKW">
+                                                    <rect key="frame" x="87" y="11" width="273" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last chat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-c0-76C">
+                                                    <rect key="frame" x="87" y="40" width="59.666666666666657" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3hE-c0-76C" firstAttribute="top" secondItem="otD-Ks-bKW" secondAttribute="bottom" constant="8" id="5zr-Kr-FM4"/>
+                                                <constraint firstAttribute="trailing" secondItem="otD-Ks-bKW" secondAttribute="trailing" constant="15" id="6uX-V2-QXJ"/>
+                                                <constraint firstItem="mw3-o5-gcB" firstAttribute="leading" secondItem="EhH-IR-BFT" secondAttribute="leadingMargin" id="D8f-Yc-zlM"/>
+                                                <constraint firstItem="otD-Ks-bKW" firstAttribute="top" secondItem="EhH-IR-BFT" secondAttribute="top" constant="11" id="KQj-Iv-LY4"/>
+                                                <constraint firstItem="3hE-c0-76C" firstAttribute="leading" secondItem="mw3-o5-gcB" secondAttribute="trailing" constant="8" id="W6p-77-PE2"/>
+                                                <constraint firstItem="mw3-o5-gcB" firstAttribute="top" secondItem="EhH-IR-BFT" secondAttribute="topMargin" id="gZA-j7-gcf"/>
+                                                <constraint firstAttribute="trailing" secondItem="3hE-c0-76C" secondAttribute="trailing" constant="228.33333333333334" id="jDo-DZ-twP"/>
+                                                <constraint firstItem="otD-Ks-bKW" firstAttribute="leading" secondItem="mw3-o5-gcB" secondAttribute="trailing" constant="8" id="vay-R7-4et"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mw3-o5-gcB" secondAttribute="bottom" constant="4" id="yPE-mk-SCl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgUser" destination="mw3-o5-gcB" id="idY-nl-aKc"/>
+                                            <outlet property="txtFullName" destination="otD-Ks-bKW" id="9p6-3X-1Md"/>
+                                            <outlet property="txtLastChat" destination="3hE-c0-76C" id="oDb-Sm-e8L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="akZ-b8-Iri" firstAttribute="top" secondItem="TJe-Ys-3PL" secondAttribute="top" constant="12" id="8fC-fV-Hgc"/>
+                            <constraint firstItem="uae-hB-ubQ" firstAttribute="leading" secondItem="TJe-Ys-3PL" secondAttribute="leading" id="Pgu-Zw-vt9"/>
+                            <constraint firstItem="TJe-Ys-3PL" firstAttribute="trailing" secondItem="akZ-b8-Iri" secondAttribute="trailing" constant="16" id="VNq-JS-snp"/>
+                            <constraint firstItem="uae-hB-ubQ" firstAttribute="top" secondItem="akZ-b8-Iri" secondAttribute="bottom" constant="8" id="Zfa-T0-RBh"/>
+                            <constraint firstItem="akZ-b8-Iri" firstAttribute="leading" secondItem="TJe-Ys-3PL" secondAttribute="leading" constant="16" id="tmT-jy-JAc"/>
+                            <constraint firstItem="uae-hB-ubQ" firstAttribute="trailing" secondItem="TJe-Ys-3PL" secondAttribute="trailing" id="ueL-07-uqe"/>
+                            <constraint firstItem="uae-hB-ubQ" firstAttribute="bottom" secondItem="TJe-Ys-3PL" secondAttribute="bottom" id="yGt-8n-0Px"/>
+                            <constraint firstItem="uae-hB-ubQ" firstAttribute="centerX" secondItem="95g-1l-Sa0" secondAttribute="centerX" id="zT1-qj-m1D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TJe-Ys-3PL"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewReboundList" destination="uae-hB-ubQ" id="dFo-eU-YR6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQl-Ih-gs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2728.8000000000002" y="58.374384236453203"/>
         </scene>
         <!--Rebound-->
         <scene sceneID="MFK-sh-ZU9">
@@ -49,6 +152,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cE7-EQ-9sy">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.74509803921568629" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,6 +172,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chat_profile_icon" width="64" height="64"/>
         <image name="navbar_rebound_list" width="56" height="56"/>
         <image name="navbar_userprofile" width="56" height="56"/>
         <image name="tabbar_rebound_icon" width="56" height="56"/>

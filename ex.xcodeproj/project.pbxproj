@@ -43,6 +43,8 @@
 		FC6E244C213287EB00F180F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC6E244B213287EB00F180F8 /* GoogleService-Info.plist */; };
 		FC6E244F21328BB800F180F8 /* Curhat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E244E21328BB800F180F8 /* Curhat.swift */; };
 		FC6E245121328F0700F180F8 /* DatabaseReperesentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */; };
+		FC6E76B721341E4A00288E80 /* ReboundListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E76B621341E4A00288E80 /* ReboundListViewController.swift */; };
+		FC6E76B921341F6E00288E80 /* ReboundListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E76B821341F6E00288E80 /* ReboundListTableViewCell.swift */; };
 		FCA6EAA02133163000CCA6B7 /* CurhatComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6EA9F2133163000CCA6B7 /* CurhatComment.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		FC6E244B213287EB00F180F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC6E244E21328BB800F180F8 /* Curhat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curhat.swift; sourceTree = "<group>"; };
 		FC6E245021328F0700F180F8 /* DatabaseReperesentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseReperesentation.swift; sourceTree = "<group>"; };
+		FC6E76B621341E4A00288E80 /* ReboundListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReboundListViewController.swift; sourceTree = "<group>"; };
+		FC6E76B821341F6E00288E80 /* ReboundListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReboundListTableViewCell.swift; sourceTree = "<group>"; };
 		FCA6EA9F2133163000CCA6B7 /* CurhatComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurhatComment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -326,6 +330,8 @@
 			children = (
 				FC409277211D9846009E8D5E /* Rebound.storyboard */,
 				FC40924F211D4A97009E8D5E /* ReboundController.swift */,
+				FC6E76B621341E4A00288E80 /* ReboundListViewController.swift */,
+				FC6E76B821341F6E00288E80 /* ReboundListTableViewCell.swift */,
 			);
 			path = Rebound;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6E76B921341F6E00288E80 /* ReboundListTableViewCell.swift in Sources */,
 				FC6E244321323C0B00F180F8 /* CurhatCommentTableViewCell.swift in Sources */,
 				ACAEF0D42133A6A600578BCF /* PaperOnboardingDelegate.swift in Sources */,
 				FC6E245121328F0700F180F8 /* DatabaseReperesentation.swift in Sources */,
@@ -503,6 +510,7 @@
 				FC6E243F21323AB000F180F8 /* CurhatCommentViewController.swift in Sources */,
 				FC6E244521324A3200F180F8 /* CurhatPostViewController.swift in Sources */,
 				ACAEF0DB2133A6A600578BCF /* Images.swift in Sources */,
+				FC6E76B721341E4A00288E80 /* ReboundListViewController.swift in Sources */,
 				ACAEF0D92133A6A600578BCF /* ConstraintsHelper.swift in Sources */,
 				FC409250211D4A97009E8D5E /* ReboundController.swift in Sources */,
 				FCA6EAA02133163000CCA6B7 /* CurhatComment.swift in Sources */,
