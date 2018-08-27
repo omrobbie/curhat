@@ -11,6 +11,7 @@ import FirebaseFirestore
 
 class CurhatCommentViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewCurhatComments: UITableView!
     @IBOutlet weak var txtComment: UITextField!
     @IBOutlet weak var txtNickname: UILabel!
@@ -27,10 +28,17 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
     
     deinit {
         curhatCommentsListerner?.remove()
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
+        
+        self.hideKeyboardWhenTappedAround()
+        
         self.tabBarController?.tabBar.isHidden = true
 
         self.txtComment.delegate = self
@@ -106,6 +114,25 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         curhatComments.remove(at: index)
         tableViewCurhatComments.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
+    
+    @objc func keyboardWasShown(notification: NSNotification) {
+        let info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+            print("Show Keyboard")
+            self.bottomConstraint.constant = -(keyboardFrame.size.height - 34)
+        })
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+            print("Hide Keyboard")
+            self.bottomConstraint.constant = 0
+        })
+    }
+    
+    
 }
 
 extension CurhatCommentViewController: UITextFieldDelegate {
@@ -129,3 +156,17 @@ extension CurhatCommentViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+        print("tap")
+    }
+}
+

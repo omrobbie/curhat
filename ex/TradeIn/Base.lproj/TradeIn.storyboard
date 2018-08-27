@@ -30,11 +30,19 @@
         <scene sceneID="QZw-j7-g3t">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nZs-Fl-mSC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Trade In" id="bEx-Xf-afO"/>
+                    <tabBarItem key="tabBarItem" title="Trade In" image="tabbar_tradein_icon" id="Q5y-qa-qV7"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oiP-45-2y5">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.74509803921568629" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -46,4 +54,7 @@
             <point key="canvasLocation" x="949.60000000000002" y="776.60098522167493"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_tradein_icon" width="56" height="56"/>
+    </resources>
 </document>

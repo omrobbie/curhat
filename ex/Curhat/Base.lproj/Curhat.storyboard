@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uMb-Wc-36o">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCurhat" rowHeight="75" id="bUq-HM-fUh" customClass="CurhatTableViewCell" customModule="ex" customModuleProvider="target">
@@ -102,14 +102,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Curhat" id="PsX-WG-7Sy">
                         <barButtonItem key="leftBarButtonItem" systemItem="compose" id="QQI-kN-8xB">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="H5v-Hf-hej" kind="show" id="IKc-1p-M1A"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem id="SMP-hy-f8W"/>
-                            <barButtonItem title="Profile" id="Kdi-Iq-bTl"/>
+                            <barButtonItem title="Profile" id="Kdi-Iq-bTl">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
                         </rightBarButtonItems>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewCurhat" destination="uMb-Wc-36o" id="PNv-NR-oYb"/>
@@ -129,10 +137,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIn-mU-AFA">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type your feelings here.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CF9-OH-QSO">
-                                        <rect key="frame" x="8" y="8" width="359" height="674"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="625"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -149,6 +157,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ciS-Dr-Q2x" firstAttribute="bottom" secondItem="xIn-mU-AFA" secondAttribute="bottom" id="3O5-wn-hcl"/>
                             <constraint firstItem="xIn-mU-AFA" firstAttribute="trailing" secondItem="ciS-Dr-Q2x" secondAttribute="trailing" id="5NE-LK-pjU"/>
@@ -201,7 +210,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kwz-8w-eCs">
-                                <rect key="frame" x="0.0" y="193" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="193" width="375" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCurhatComment" rowHeight="69" id="7yb-jz-ikH" customClass="CurhatCommentTableViewCell" customModule="ex" customModuleProvider="target">
@@ -247,8 +256,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-ae-3Tl">
-                                <rect key="frame" x="0.0" y="732" width="375" height="46"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-ae-3Tl" userLabel="viewComment">
+                                <rect key="frame" x="0.0" y="683" width="375" height="46"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eP-G4-EaP">
                                         <rect key="frame" x="8" y="8" width="315" height="30"/>
@@ -258,13 +267,15 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qof-CN-l1l">
                                         <rect key="frame" x="331" y="8" width="36" height="30"/>
-                                        <state key="normal" title="Send"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="btnSendClicked:" destination="U7Y-Pc-HWL" eventType="touchUpInside" id="wch-J4-fBr"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Qof-CN-l1l" firstAttribute="leading" secondItem="4eP-G4-EaP" secondAttribute="trailing" constant="8" id="WV9-2r-uaR"/>
                                     <constraint firstAttribute="bottom" secondItem="4eP-G4-EaP" secondAttribute="bottom" constant="8" id="Xdo-yH-4oH"/>
@@ -277,6 +288,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UcO-IR-gtE" firstAttribute="top" secondItem="weL-gn-T45" secondAttribute="top" id="536-gE-bly"/>
                             <constraint firstItem="ttl-ae-3Tl" firstAttribute="bottom" secondItem="weL-gn-T45" secondAttribute="bottom" id="7gO-pm-LFw"/>
@@ -295,6 +307,7 @@
                         <viewLayoutGuide key="safeArea" id="weL-gn-T45"/>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="7gO-pm-LFw" id="zgW-nJ-hWY"/>
                         <outlet property="tableViewCurhatComments" destination="kwz-8w-eCs" id="WUQ-yq-4L1"/>
                         <outlet property="txtComment" destination="4eP-G4-EaP" id="iS5-dg-wAN"/>
                         <outlet property="txtFeeling" destination="5PE-Qq-cWh" id="8mU-bK-S9k"/>
@@ -309,11 +322,20 @@
         <scene sceneID="8Iz-21-VH1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gt9-Q2-8Fn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Curhat" id="8Ac-dn-mQh"/>
+                    <tabBarItem key="tabBarItem" title="Curhat" image="tabbar_curhat_icon" id="Tm2-Sv-gGd"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2ZT-re-9jS">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.74509803919999995" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -325,4 +347,7 @@
             <point key="canvasLocation" x="949.60000000000002" y="1512.5615763546798"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_curhat_icon" width="56" height="56"/>
+    </resources>
 </document>

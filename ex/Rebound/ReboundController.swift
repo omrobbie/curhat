@@ -12,6 +12,11 @@ class ReboundController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Ubah warna Title Nav Bar
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Nunito-Regular", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white
+        ]
+        
     }
 
 }

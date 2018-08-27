@@ -57,6 +57,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.74509803921568629" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="9bl-qx-leS" kind="relationship" relationship="viewControllers" id="12a-1g-2ir"/>
@@ -72,7 +78,7 @@
         <scene sceneID="hTh-QP-yIW">
             <objects>
                 <viewControllerPlaceholder storyboardName="Rebound" id="9bl-qx-leS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tfq-65-cgr"/>
+                    <tabBarItem key="tabBarItem" title="Rebound" image="tabbar_rebound_icon" selectedImage="tabbar_rebound_icon" id="tfq-65-cgr"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezQ-Db-M2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +88,7 @@
         <scene sceneID="Oga-JQ-7n4">
             <objects>
                 <viewControllerPlaceholder storyboardName="TradeIn" id="rmx-yV-RBn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="68C-HB-4TH"/>
+                    <tabBarItem key="tabBarItem" title="Trade In" image="tabbar_tradein_icon" id="68C-HB-4TH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gd-WM-PxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,11 +98,15 @@
         <scene sceneID="bU7-A1-jFJ">
             <objects>
                 <viewControllerPlaceholder storyboardName="Curhat" id="0J0-MG-4My" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9Yz-as-4XP"/>
+                    <tabBarItem key="tabBarItem" title="nmkmm" id="9Yz-as-4XP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LhG-mW-Uhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="322" y="522"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_rebound_icon" width="56" height="56"/>
+        <image name="tabbar_tradein_icon" width="56" height="56"/>
+    </resources>
 </document>
