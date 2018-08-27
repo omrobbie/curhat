@@ -33,6 +33,7 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
 
+        self.txtComment.delegate = self
         self.tableViewCurhatComments.delegate = self
         self.tableViewCurhatComments.dataSource = self
         
@@ -77,6 +78,7 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
             "comment" : comment
         ]
         
+        self.txtComment.text = ""
         self.curhatReference?.document(self.curhat.id!).collection("comments").addDocument(data: docData)
     }
     
@@ -103,6 +105,13 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         
         curhatComments.remove(at: index)
         tableViewCurhatComments.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+    }
+}
+
+extension CurhatCommentViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.btnSendClicked(self)
+        return true
     }
 }
 

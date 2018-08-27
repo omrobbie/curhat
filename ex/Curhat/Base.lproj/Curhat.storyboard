@@ -158,7 +158,7 @@
                         <viewLayoutGuide key="safeArea" id="ciS-Dr-Q2x"/>
                     </view>
                     <connections>
-                        <outlet property="txtCurhat" destination="CF9-OH-QSO" id="Snc-Z2-QxN"/>
+                        <outlet property="txtFeeling" destination="CF9-OH-QSO" id="Snc-Z2-QxN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNT-rg-Def" userLabel="First Responder" sceneMemberID="firstResponder"/>

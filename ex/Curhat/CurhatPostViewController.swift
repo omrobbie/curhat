@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
-class CurhatPostViewController: UIViewController, UITextViewDelegate {
+class CurhatPostViewController: UIViewController {
 
-    @IBOutlet weak var txtCurhat: UITextView!
+    @IBOutlet weak var txtFeeling: UITextView!
     
     let placeholderText = "Type your feelings here.."
     
+    var db: Firestore?
+    
+    var curhatReference: CollectionReference?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
 
-        self.txtCurhat.delegate = self
-        self.txtCurhat.text = placeholderText
-        self.txtCurhat.textColor = UIColor.lightGray
+        self.txtFeeling.delegate = self
+        self.txtFeeling.text = placeholderText
+        self.txtFeeling.textColor = UIColor.lightGray
         
         let rightBarButton = UIBarButtonItem(title: "Post", style: UIBarButtonItemStyle.plain, target: self, action: #selector(postCurhat(_:)))
         self.navigationItem.rightBarButtonItem = rightBarButton
+        
+        self.db = Firestore.firestore()
+        self.curhatReference = db?.collection("curhat")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    @objc func postCurhat(_ sender:UIBarButtonItem!) {
+        guard let feeling = txtFeeling.text,
+            txtFeeling.text != "",
+            txtFeeling.text != placeholderText else {return}
+        
+        let docData: [String : Any] = [
+            "nickname" : "omrobbie",
+            "feeling" : feeling,
+            "comments" : 0
+        ]
+        
+        self.curhatReference?.addDocument(data: docData)
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension CurhatPostViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
@@ -42,8 +67,5 @@ class CurhatPostViewController: UIViewController, UITextViewDelegate {
             textView.text = placeholderText
             textView.textColor = UIColor.lightGray
         }
-    }
-    
-    @objc func postCurhat(_ sender:UIBarButtonItem!) {
     }
 }
