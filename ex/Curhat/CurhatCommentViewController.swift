@@ -88,7 +88,8 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         
         let docData: [String : Any] = [
             "nickname" : "omrobbie",
-            "comment" : comment
+            "comment" : comment,
+            "sendDate" : Date()
         ]
         
         self.txtComment.text = ""
