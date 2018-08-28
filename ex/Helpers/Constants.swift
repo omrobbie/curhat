@@ -6,6 +6,10 @@
 //  Copyright © 2018 omrobbie. All rights reserved.
 //
 
+enum Author {
+    static let nickname = "omrobbie"
+}
+
 enum CollectionPath {
     static let users = "users"
     static let chats = "chats"

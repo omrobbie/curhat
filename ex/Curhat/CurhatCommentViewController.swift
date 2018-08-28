@@ -87,7 +87,7 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         guard let comment = txtComment.text, txtComment.text != "" else {return}
         
         let docData: [String : Any] = [
-            "nickname" : "omrobbie",
+            "nickname" : Author.nickname,
             "comment" : comment,
             "sendDate" : Date()
         ]
