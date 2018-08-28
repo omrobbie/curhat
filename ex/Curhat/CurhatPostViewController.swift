@@ -46,7 +46,8 @@ class CurhatPostViewController: UIViewController {
         let docData: [String : Any] = [
             "nickname" : "omrobbie",
             "feeling" : feeling,
-            "comments" : 0
+            "comments" : 0,
+            "sendDate" : Date()
         ]
         
         self.curhatReference?.addDocument(data: docData)
