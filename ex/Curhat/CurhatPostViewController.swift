@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseFirestore
 
-class CurhatPostViewController: UIViewController {
+class CurhatPostViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtFeeling: UITextView!
     
@@ -26,6 +26,7 @@ class CurhatPostViewController: UIViewController {
         self.txtFeeling.delegate = self
         self.txtFeeling.text = placeholderText
         self.txtFeeling.textColor = UIColor.lightGray
+        self.txtFeeling.becomeFirstResponder()
 
         if NICKNAME?.isEmpty ?? true {
             changeNickname()

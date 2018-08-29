@@ -31,13 +31,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feelings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-d2-YQ6">
-                                                    <rect key="frame" x="23" y="19" width="329" height="19.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <rect key="frame" x="23" y="19" width="329" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QT-2C-I6R">
-                                                    <rect key="frame" x="23" y="46.333333333333336" width="337" height="16"/>
+                                                    <rect key="frame" x="23" y="45" width="337" height="16"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number of comments" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-Bl-W4L">
                                                             <rect key="frame" x="201" y="1" width="112" height="14"/>
@@ -73,8 +73,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wuV-d2-YQ6" firstAttribute="trailing" secondItem="NVG-ls-RmY" secondAttribute="trailingMargin" constant="-8" id="JcT-8i-39h"/>
-                                                <constraint firstAttribute="bottom" secondItem="0QT-2C-I6R" secondAttribute="bottom" constant="27.333333333333336" id="KRh-hV-DPw"/>
                                                 <constraint firstItem="0QT-2C-I6R" firstAttribute="leading" secondItem="NVG-ls-RmY" secondAttribute="leadingMargin" constant="8" id="UxP-Ne-I8Y"/>
+                                                <constraint firstAttribute="bottom" secondItem="0QT-2C-I6R" secondAttribute="bottom" constant="28.666666666666671" id="VIb-to-tfh"/>
                                                 <constraint firstItem="wuV-d2-YQ6" firstAttribute="top" secondItem="NVG-ls-RmY" secondAttribute="topMargin" constant="8" id="Whx-xa-PB1"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0QT-2C-I6R" secondAttribute="trailing" id="bao-an-3zb"/>
                                                 <constraint firstItem="wuV-d2-YQ6" firstAttribute="leading" secondItem="NVG-ls-RmY" secondAttribute="leadingMargin" constant="8" id="qMB-sR-Lz9"/>
@@ -172,6 +172,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type your feeling here.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CF9-OH-QSO">
                                         <rect key="frame" x="8" y="8" width="359" height="581"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -213,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcO-IR-gtE">
-                                <rect key="frame" x="0.0" y="88" width="375" height="63"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="60.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yz2-Gu-ps6">
                                         <rect key="frame" x="8" y="8" width="359" height="14"/>
@@ -222,8 +223,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feelings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PE-Qq-cWh">
-                                        <rect key="frame" x="16" y="30" width="343" height="23.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                        <rect key="frame" x="16" y="30" width="343" height="20.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -240,7 +241,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kwz-8w-eCs">
-                                <rect key="frame" x="0.0" y="196" width="375" height="443"/>
+                                <rect key="frame" x="0.0" y="184.66666666666666" width="375" height="454.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCurhatComment" rowHeight="71" id="7yb-jz-ikH" customClass="CurhatCommentTableViewCell" customModule="ex" customModuleProvider="target">
@@ -257,8 +258,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA5-47-PLz">
-                                                    <rect key="frame" x="15" y="33" width="345" height="23.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="33" width="345" height="20.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -268,8 +269,8 @@
                                                 <constraint firstItem="OA5-47-PLz" firstAttribute="trailing" secondItem="jXc-3L-KmH" secondAttribute="trailingMargin" id="1w4-rT-07g"/>
                                                 <constraint firstItem="LkI-aa-Urv" firstAttribute="trailing" secondItem="jXc-3L-KmH" secondAttribute="trailingMargin" id="4lg-kn-DG6"/>
                                                 <constraint firstItem="OA5-47-PLz" firstAttribute="top" secondItem="LkI-aa-Urv" secondAttribute="bottom" constant="8" id="7l8-JS-h8P"/>
+                                                <constraint firstAttribute="bottom" secondItem="OA5-47-PLz" secondAttribute="bottom" constant="17" id="Mhb-kN-9sj"/>
                                                 <constraint firstItem="LkI-aa-Urv" firstAttribute="leading" secondItem="jXc-3L-KmH" secondAttribute="leadingMargin" id="TEH-dN-5ww"/>
-                                                <constraint firstAttribute="bottom" secondItem="OA5-47-PLz" secondAttribute="bottom" constant="14.333333333333343" id="TOb-Ra-buY"/>
                                                 <constraint firstItem="LkI-aa-Urv" firstAttribute="top" secondItem="jXc-3L-KmH" secondAttribute="topMargin" id="sr0-i2-DqD"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -280,8 +281,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcI-ZK-q4V">
+                                <rect key="frame" x="16" y="156.33333333333334" width="343" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-5d-KtZ">
-                                <rect key="frame" x="0.0" y="151" width="375" height="488"/>
+                                <rect key="frame" x="0.0" y="148.33333333333334" width="375" height="490.66666666666663"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_message" translatesAutoresizingMaskIntoConstraints="NO" id="RsI-wc-Pql">
                                         <rect key="frame" x="67" y="45" width="240" height="210"/>
@@ -334,12 +341,6 @@
                                     <constraint firstAttribute="bottom" secondItem="Qof-CN-l1l" secondAttribute="bottom" constant="8" id="xLI-fb-2q9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcI-ZK-q4V">
-                                <rect key="frame" x="16" y="159" width="343" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

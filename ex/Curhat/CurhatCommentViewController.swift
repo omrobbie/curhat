@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseFirestore
 
-class CurhatCommentViewController: UIViewController, UITableViewDelegate {
+class CurhatCommentViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewCurhatComments: UITableView!
@@ -42,10 +42,12 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         
         self.tabBarController?.tabBar.isHidden = true
 
-        self.txtComment.delegate = self
         self.tableViewCurhatComments.delegate = self
         self.tableViewCurhatComments.dataSource = self
-        
+
+        self.txtComment.delegate = self
+        self.txtComment.becomeFirstResponder()
+
         self.txtNickname.text = self.curhat.nickname
         self.txtFeeling.text = self.curhat.feeling
         
@@ -88,11 +90,20 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func btnSendClicked(_ sender: Any) {
+        self.postComment()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.postComment()
+        return true
+    }
+
+    func postComment() {
         if NICKNAME?.isEmpty ?? true {
             changeNickname()
             return
         }
-
+        
         guard let comment = txtComment.text, txtComment.text != "" else {return}
         
         let docData: [String : Any] = [
@@ -101,6 +112,7 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
             "sendDate" : Date()
         ]
         
+        self.dismissKeyboard()
         self.txtComment.text = ""
         self.curhatReference?.document(self.curhat.id!).collection(CollectionPath.comments).addDocument(data: docData)
     }
@@ -143,13 +155,6 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
             self.bottomConstraint.constant = 0
         })
-    }
-}
-
-extension CurhatCommentViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.btnSendClicked(self)
-        return true
     }
 }
 
