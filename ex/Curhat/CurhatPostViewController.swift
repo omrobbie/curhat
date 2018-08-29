@@ -44,7 +44,7 @@ class CurhatPostViewController: UIViewController {
             txtFeeling.text != placeholderText else {return}
         
         let docData: [String : Any] = [
-            "nickname" : Author.nickname,
+            "nickname" : NICKNAME!,
             "feeling" : feeling,
             "comments" : 0,
             "sendDate" : Date()

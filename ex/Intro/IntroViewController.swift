@@ -12,25 +12,25 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     
     fileprivate let items = [
-        OnboardingItemInfo(informationImage: Asset.asset1.image,
-                           title: "Trade In",
-                           description: "Menukar barang mantan dengan barang mantan seseorang",
-                           pageIcon: Asset.indicator_tradein_icon.image,
-                           color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
+        OnboardingItemInfo(informationImage: Asset.curhat_image.image,
+                           title: "Curhat",
+                           description: "Tuangkan perasaanmu, sesuka kamu",
+                           pageIcon: Asset.indicator_curhat_icon.image,
+                           color: #colorLiteral(red: 1, green: 0.8202130198, blue: 0.4282061458, alpha: 1),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
-        OnboardingItemInfo(informationImage: Asset.asset2.image,
-                           title: "Rebound",
-                           description: "Mencari teman untuk dapat bertemu dan hangout",
+        OnboardingItemInfo(informationImage: Asset.rebound_image.image,
+                           title: "Hangout",
+                           description: "Cari teman untuk ketemuan dan hangout bareng",
                            pageIcon: Asset.indicator_rebound_icon.image,
                            color: UIColor(red: 0.40, green: 0.69, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
-        
-        OnboardingItemInfo(informationImage: Asset.asset3.image,
-                           title: "Curhat",
-                           description: "Menuangkan perasaan sesuka kamu",
-                           pageIcon: Asset.indicator_curhat_icon.image,
-                           color: #colorLiteral(red: 1, green: 0.8202130198, blue: 0.4282061458, alpha: 1),
+
+        OnboardingItemInfo(informationImage: Asset.tradein_image.image,
+                           title: "Take & Give",
+                           description: "Tunjukkan kalau kita perduli",
+                           pageIcon: Asset.indicator_tradein_icon.image,
+                           color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         ]
@@ -43,7 +43,6 @@ class IntroViewController: UIViewController {
         setupPaperOnboardingView()
         
         view.bringSubview(toFront: skipButton)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,7 +52,6 @@ class IntroViewController: UIViewController {
     
 
     private func setupPaperOnboardingView() {
-        
         let onboarding = PaperOnboarding()
         onboarding.delegate = self
         onboarding.dataSource = self
@@ -77,7 +75,6 @@ class IntroViewController: UIViewController {
 // MARK: Actions
 
 extension IntroViewController {
-    
     @IBAction func skipButtonTapped(_: UIButton) {
         print(#function)
         print("button skip")
@@ -90,7 +87,6 @@ extension IntroViewController {
 // MARK: PaperOnboardingDelegate
 
 extension IntroViewController: PaperOnboardingDelegate {
-    
     func onboardingWillTransitonToIndex(_ index: Int) {
         skipButton.isHidden = index == 2 ? false : true
     }
@@ -108,7 +104,6 @@ extension IntroViewController: PaperOnboardingDelegate {
 // MARK: PaperOnboardingDataSource
 
 extension IntroViewController: PaperOnboardingDataSource {
-    
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
         return items[index]
     }

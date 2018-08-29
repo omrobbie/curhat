@@ -87,13 +87,13 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         guard let comment = txtComment.text, txtComment.text != "" else {return}
         
         let docData: [String : Any] = [
-            "nickname" : Author.nickname,
+            "nickname" : NICKNAME!,
             "comment" : comment,
             "sendDate" : Date()
         ]
         
         self.txtComment.text = ""
-    self.curhatReference?.document(self.curhat.id!).collection(CollectionPath.comments).addDocument(data: docData)
+        self.curhatReference?.document(self.curhat.id!).collection(CollectionPath.comments).addDocument(data: docData)
     }
     
     func addList(_ curhatComment: CurhatComment) {

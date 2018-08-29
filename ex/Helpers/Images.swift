@@ -46,9 +46,9 @@ struct ColorAsset {
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 enum Asset {
-    static let asset1 = ImageAsset(name: "asset1")
-    static let asset2 = ImageAsset(name: "asset2")
-    static let asset3 = ImageAsset(name: "asset3")
+    static let tradein_image = ImageAsset(name: "asset1")
+    static let rebound_image = ImageAsset(name: "asset2")
+    static let curhat_image = ImageAsset(name: "asset3")
     static let indicator_tradein_icon = ImageAsset(name: "indicator_tradein_icon")
     static let indicator_rebound_icon = ImageAsset(name: "indicator_rebound_icon")
     static let indicator_curhat_icon = ImageAsset(name: "indicator_curhat_icon")
@@ -57,9 +57,9 @@ enum Asset {
     static let allColors: [ColorAsset] = [
     ]
     static let allImages: [ImageAsset] = [
-        asset1,
-        asset2,
-        asset3,
+        tradein_image,
+        rebound_image,
+        curhat_image,
         indicator_tradein_icon,
         indicator_rebound_icon,
         indicator_curhat_icon,

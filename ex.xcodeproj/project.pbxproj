@@ -26,7 +26,8 @@
 		ACAEF0E32133A6C600578BCF /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACAEF0DF2133A6C600578BCF /* Nunito-Bold.ttf */; };
 		ACAEF0E42133A6C600578BCF /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACAEF0E02133A6C600578BCF /* OpenSans-Regular.ttf */; };
 		ACAEF0E62133A6F800578BCF /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEF0E52133A6F800578BCF /* IntroViewController.swift */; };
-		ACAEF0EB2133ACD100578BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAEF0EA2133ACD100578BCF /* Assets.xcassets */; };
+		FC02D11521361FB5002A9FDB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC02D11421361FB5002A9FDB /* Extension.swift */; };
+		FC02D11721364B7C002A9FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC02D11621364B7C002A9FDB /* Assets.xcassets */; };
 		FC40924E211D4A97009E8D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40924D211D4A97009E8D5E /* AppDelegate.swift */; };
 		FC409250211D4A97009E8D5E /* ReboundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40924F211D4A97009E8D5E /* ReboundController.swift */; };
 		FC409253211D4A97009E8D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC409251211D4A97009E8D5E /* Main.storyboard */; };
@@ -70,8 +71,9 @@
 		ACAEF0DF2133A6C600578BCF /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		ACAEF0E02133A6C600578BCF /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		ACAEF0E52133A6F800578BCF /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		ACAEF0EA2133ACD100578BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "ex/Supporting Files/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		DC21470480D4C42ABF779428 /* Pods_ex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC02D11421361FB5002A9FDB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		FC02D11621364B7C002A9FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC40924A211D4A97009E8D5E /* ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC40924D211D4A97009E8D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC40924F211D4A97009E8D5E /* ReboundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReboundController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				ACAEF0CA2133A6A500578BCF /* ConstraintsHelper.swift */,
 				ACAEF0CB2133A6A500578BCF /* Configuring.swift */,
 				FC6E76BA2134669F00288E80 /* Constants.swift */,
+				FC02D11421361FB5002A9FDB /* Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -318,7 +321,7 @@
 		FC6E24482132861B00F180F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				ACAEF0EA2133ACD100578BCF /* Assets.xcassets */,
+				FC02D11621364B7C002A9FDB /* Assets.xcassets */,
 				ACAEF0DC2133A6C600578BCF /* fonts */,
 				FC409256211D4A9A009E8D5E /* LaunchScreen.storyboard */,
 				FC40924D211D4A97009E8D5E /* AppDelegate.swift */,
@@ -420,7 +423,7 @@
 			files = (
 				ACAEF0E22133A6C600578BCF /* Nunito-Regular.ttf in Resources */,
 				FC40927B211D9847009E8D5E /* TradeIn.storyboard in Resources */,
-				ACAEF0EB2133ACD100578BCF /* Assets.xcassets in Resources */,
+				FC02D11721364B7C002A9FDB /* Assets.xcassets in Resources */,
 				ACAEF0E12133A6C600578BCF /* Nunito-Light.ttf in Resources */,
 				FC40927C211D9847009E8D5E /* Rebound.storyboard in Resources */,
 				FC409258211D4A9A009E8D5E /* LaunchScreen.storyboard in Resources */,
@@ -525,6 +528,7 @@
 				ACAEF0D12133A6A600578BCF /* PageView.swift in Sources */,
 				ACAEF0D32133A6A600578BCF /* OnboardingContantViewItem.swift in Sources */,
 				ACAEF0D22133A6A600578BCF /* OnboardingContentView.swift in Sources */,
+				FC02D11521361FB5002A9FDB /* Extension.swift in Sources */,
 				ACAEF0D82133A6A600578BCF /* PaperOnboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,7 +705,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.ada.curhat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -720,7 +724,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.ada.curhat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

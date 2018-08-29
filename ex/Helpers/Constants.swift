@@ -7,7 +7,7 @@
 //
 
 enum Author {
-    static let nickname = "omrobbie"
+    static let nickname = "nickname"
 }
 
 enum CollectionPath {

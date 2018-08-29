@@ -9,11 +9,14 @@
 import UIKit
 import FirebaseFirestore
 
+var NICKNAME: String?
+
 class CurhatController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableViewCurhat: UITableView!
     @IBOutlet weak var txtTitleEmpty: UILabel!
     @IBOutlet weak var viewEmpty: UIView!
+    
     
     var curhats = [Curhat]()
     
@@ -28,14 +31,18 @@ class CurhatController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Ubah warna Title Nav Bar
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Nunito-Regular", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white
-        ]
-        
         self.tableViewCurhat.delegate = self
         self.tableViewCurhat.dataSource = self
         
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Nunito-Regular", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white
+        ]
+        
         self.txtTitleEmpty.font = UIFont(name: "Nunito-Bold", size: 24.0) ?? UIFont.boldSystemFont(ofSize: 24.0)
+        
+        NICKNAME = UserDefaults.standard.string(forKey: Author.nickname)
+        if NICKNAME?.isEmpty ?? true {
+            self.changeNickname()
+        }
 
         self.db = Firestore.firestore()
         
@@ -67,6 +74,17 @@ class CurhatController: UIViewController, UITableViewDelegate {
             let destination = segue.destination as? CurhatCommentViewController,
             let index = tableViewCurhat.indexPathForSelectedRow?.row {
                 destination.curhat = curhats[index]
+        }
+    }
+    
+    @IBAction func btnProfile(_ sender: Any) {
+        self.changeNickname()
+    }
+    
+    func changeNickname() {
+        showInputDialog(title: "Input your anonymous name", subtitle: "You can change it later in Profile", inputPlaceholder: "anonymous name") { (nickname) in
+            NICKNAME = nickname!
+            UserDefaults.standard.set(nickname!, forKey: Author.nickname)
         }
     }
     

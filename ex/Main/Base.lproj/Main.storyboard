@@ -26,9 +26,6 @@
                                 <state key="normal" title="skip">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="skipButtonTapped:" destination="ILC-vT-CwF" eventType="touchUpInside" id="i6l-qW-z8F"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,7 +37,6 @@
                         <viewLayoutGuide key="safeArea" id="gnc-ha-JIy"/>
                     </view>
                     <connections>
-                        <outlet property="skipButton" destination="zhi-0q-jv6" id="3HS-UA-I3R"/>
                         <segue destination="lMT-2R-kZR" kind="show" identifier="gotomainmenu" id="onG-gV-n5t"/>
                     </connections>
                 </viewController>
