@@ -41,7 +41,7 @@ class CurhatController: UIViewController, UITableViewDelegate {
         
         NICKNAME = UserDefaults.standard.string(forKey: Author.nickname)
         if NICKNAME?.isEmpty ?? true {
-            self.changeNickname()
+            changeNickname()
         }
 
         self.db = Firestore.firestore()
@@ -79,13 +79,6 @@ class CurhatController: UIViewController, UITableViewDelegate {
     
     @IBAction func btnProfile(_ sender: Any) {
         self.changeNickname()
-    }
-    
-    func changeNickname() {
-        showInputDialog(title: "Input your anonymous name", subtitle: "You can change it later in Profile", inputPlaceholder: "anonymous name") { (nickname) in
-            NICKNAME = nickname!
-            UserDefaults.standard.set(nickname!, forKey: Author.nickname)
-        }
     }
     
     func addList(_ curhat: Curhat) {

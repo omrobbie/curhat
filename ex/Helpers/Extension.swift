@@ -34,4 +34,20 @@ extension UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func showDialog(title:String? = nil,
+                    subtitle:String? = nil,
+                    actionTitle:String? = "Ok") {
+        let alert = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .destructive))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func changeNickname() {
+        showInputDialog(title: "Input your anonymous name", subtitle: "You can change it later in Profile", inputPlaceholder: "anonymous name") { (nickname) in
+            NICKNAME = nickname!
+            UserDefaults.standard.set(nickname!, forKey: Author.nickname)
+        }
+    }
 }

@@ -26,6 +26,10 @@ class CurhatPostViewController: UIViewController {
         self.txtFeeling.delegate = self
         self.txtFeeling.text = placeholderText
         self.txtFeeling.textColor = UIColor.lightGray
+
+        if NICKNAME?.isEmpty ?? true {
+            changeNickname()
+        }
         
         let rightBarButton = UIBarButtonItem(title: "Post", style: UIBarButtonItemStyle.plain, target: self, action: #selector(postCurhat(_:)))
         self.navigationItem.rightBarButtonItem = rightBarButton
