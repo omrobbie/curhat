@@ -51,6 +51,10 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
         
         self.txtTitleEmpty.font = UIFont(name: "Nunito-Bold", size: 24.0) ?? UIFont.boldSystemFont(ofSize: 24.0)
         
+        if NICKNAME?.isEmpty ?? true {
+            changeNickname()
+        }
+
         self.db = Firestore.firestore()
         self.curhatReference = db?.collection(CollectionPath.curhats)
         
@@ -84,6 +88,11 @@ class CurhatCommentViewController: UIViewController, UITableViewDelegate {
     }
     
     @IBAction func btnSendClicked(_ sender: Any) {
+        if NICKNAME?.isEmpty ?? true {
+            changeNickname()
+            return
+        }
+
         guard let comment = txtComment.text, txtComment.text != "" else {return}
         
         let docData: [String : Any] = [

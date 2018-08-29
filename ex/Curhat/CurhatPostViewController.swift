@@ -43,6 +43,11 @@ class CurhatPostViewController: UIViewController {
     }
     
     @objc func postCurhat(_ sender:UIBarButtonItem!) {
+        if NICKNAME?.isEmpty ?? true {
+            changeNickname()
+            return
+        }
+
         guard let feeling = txtFeeling.text,
             txtFeeling.text != "",
             txtFeeling.text != placeholderText else {return}
